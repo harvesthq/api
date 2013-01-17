@@ -1,6 +1,6 @@
 # Introduction to the Harvest API
 
-Harvest provides two API interfaces, serving two distinct roles. If you need to access and manipulate your daily timesheet the Time Tracking API fits the bill. Notable uses of the Time Tracking API are the widgets we provide for PC and Mac as well as other third party timesheet software integrations.
+Harvest provides two API interfaces, serving two distinct roles. If you need to access and manipulate your daily timesheet the [Time Tracking API](https://github.com/harvesthq/Developer-Community/blob/master/Timesheet%20API/Time%20Tracking.md) fits the bill. Notable uses of the [Time Tracking API](https://github.com/harvesthq/Developer-Community/blob/master/Timesheet%20API/Time%20Tracking.md) are the widgets we provide for PC and Mac as well as other third party timesheet software integrations.
 
 If you need to access and edit your projects, clients, users and tasks the extended API is your choice. You can use this to mass import your existing projects setup, add users and generally integrate with your existing back-office setup.
 
@@ -16,7 +16,7 @@ Finally, check out our [Developer Community Wiki](https://github.com/harvesthq/D
 
 ## AUTHORIZATION
 
-All requests to the Harvest API are made on the behalf of an actual user (see the HTTP Basic Authentication or OAuth 2.0 Authentication sections for detail on authenticating your requests). You can use a regular account for requests against the Time Tracking API, but for private integrations accessing the Extended REST API we recommend creating a special admin user.
+All requests to the Harvest API are made on the behalf of an actual user (see the [HTTP Basic Authentication](https://github.com/harvesthq/Developer-Community/blob/master/Authentication/HTTP%20Basic.md) or [OAuth 2.0 Authentication](https://github.com/harvesthq/Developer-Community/blob/master/Authentication/OAuth%202.0.md) sections for detail on authenticating your requests). You can use a regular account for requests against the [Time Tracking API](https://github.com/harvesthq/Developer-Community/blob/master/Timesheet%20API/Time%20Tracking.md), but for private integrations accessing the Extended REST API we recommend creating a special admin user.
 
 Harvest will check your role on each request, and actions that are unavailable to you on the UI will be unavailable over the API as well. Administrators can generally access all API resources, and regular users are limited to their own timesheets. Project Managers can access projects they manage in addition to their own timesheets.
 
