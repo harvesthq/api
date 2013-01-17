@@ -14,7 +14,7 @@ The Implicit Grant flow is used for client-side API consumption. Implicit Grant 
 
 *Implicit Grant is only appropriate for client-side API access. Please use the Authorization Code flow for server-side API access.*
 
-To make an authorization request, direct the user to a url including your app's client_id and the proper response_type. An example URL with whitespace and newlines added:
+To make an authorization request, direct the user to a url including your app's client_id and the proper response_type. An example URL:
 
     https://api.harvestapp.com/oauth2/authorize ?client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &redirect_uri=https%3A%2F%2Fmyapp.com%2Fsome_path &state=optional-csrf-token &response_type=token
 
@@ -65,7 +65,7 @@ Because this request is against api.harvestapp.com, any Harvest company can auth
 
 Upon authentication and authorization, the user will be redirected back with a URL containing an authorization code. This code must then be exchanged for a refresh and access token using a server-side request and the client's secret key.
 
-The user is redirected back to the redirect_uri parameter you passed after authorization. An example URL with whitespace and newlines added:
+The user is redirected back to the redirect_uri parameter you passed after authorization. An example URL:
 
     https://myapp.com/some_path?code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D&state=optional-csrf-token
 
