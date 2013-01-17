@@ -28,9 +28,10 @@ Successful requests return HTTP response codes in the 2xx range (e.g. 200, 201, 
 
 *Firefox Users*: We recommend using the [RestClient plugin](https://addons.mozilla.org/en-US/firefox/addon/restclient/) to help you make requests to and see responses from the Harvest API. You need to set up your request headers with the following:
 
-Accept: application/xml
-Content-Type: application/xml
-Authorization: Basic (insert your authentication string here)
+    Accept: application/xml
+    Content-Type: application/xml
+    Authorization: Basic (insert your authentication string here)
+
 Your authentication string is a base64 encoded version of your credentials. You can generate this in Ruby:
 
     Base64.encode64("my@email.com:password").delete("\r\n")
