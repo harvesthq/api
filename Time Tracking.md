@@ -4,16 +4,16 @@ The Time tracking API allows you to access and manipulate time entries in simila
 
 ## RETRIEVING ENTRIES AND PROJECTS/TASKS FOR A DAY
 
-    GET /daily
+GET /daily
 
 Retrieves entries for the today paired with the projects and tasks that can be added to the timesheet by the requesting user.
 
-    GET /daily/#{day_of_the_year}/#{year}
+GET /daily/#{day_of_the_year}/#{year}
 
 Optionally you may ask for entries for a given day by passing in date composed by the year and the day of the year (1..366).
 
-    HTTP Response: 200 Success
-
+HTTP Response: 200 Success
+```xml
     <daily>
       <for_day type="date">Wed, 18 Oct 2006</for_day>
       <day_entries>
@@ -66,7 +66,8 @@ Optionally you may ask for entries for a given day by passing in date composed b
         </project>
       </projects>
     </daily>
-
+	```
+	
 ## RETRIEVING A SINGLE ENTRY
 
     GET /daily/show/#{day_entry_id}
