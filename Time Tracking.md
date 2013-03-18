@@ -66,16 +66,17 @@ HTTP Response: 200 Success
         </project>
       </projects>
     </daily>
-	```
+```
 	
 ## RETRIEVING A SINGLE ENTRY
 
-    GET /daily/show/#{day_entry_id}
+GET /daily/show/#{day_entry_id}
 
 Retrieves the selected entry.
 
-    HTTP Response: 200 Success
+HTTP Response: 200 Success
 
+```xml
     <timer>
       <day_entry>
         <id type="integer">195168</id>
@@ -99,15 +100,17 @@ Retrieves the selected entry.
         <ended_at>10:00am</ended_at>
       </day_entry>
     </timer>
+```
 
 ## TOGGLING A TIMER
 
-    GET /daily/timer/#{day_entry_id}
+GET /daily/timer/#{day_entry_id}
 
 Starts and stops a timer for a selected entry.
 
-    HTTP Response: 200 Success
+HTTP Response: 200 Success
 
+```xml
     <timer>
       <!-- day_entry with toggled timer -->
       <day_entry>
@@ -136,19 +139,21 @@ Starts and stops a timer for a selected entry.
         0.87
       </hours_for_previously_running_timer>
     </timer>
+```
 
 Note: if your account uses timestamp timers, timers cannot be restarted. Instead, a new timer will be created with the same project, task, and notes and be returned.
 
 ## CREATING AN ENTRY
 
-    POST /daily/add
+POST /daily/add
 
 Create an entry on the daily screen
 
-    HTTP Response: 201 Created
+HTTP Response: 201 Created
 
 You need to POST the following:
 
+```xml
     <request>
       <notes>Test api support</notes>
       <hours>3</hours>
@@ -156,13 +161,17 @@ You need to POST the following:
       <task_id type="integer">14</task_id>
       <spent_at type="date">Tue, 17 Oct 2006</spent_at>
     </request>
+```
 
 Note: you can transmit a blank string as hours if you want to start a timer against the new day_entry record. For example: 
 
+```xml
     <hours> </hours>
+```
 
 You'll get the following reply:
 
+```xml
     <timer>
       <!-- new entry -->
       <day_entry>
@@ -183,9 +192,11 @@ You'll get the following reply:
         0.87
       </hours_for_previously_running_timer>
     </timer>
+```
 
 If your account uses timestamp timers, you may alternatively POST a started_at and ended_at time:
 
+```xml
     <request>
       <notes>Test api support</notes>
       <started_at>8:00am</started_at>
@@ -194,27 +205,29 @@ If your account uses timestamp timers, you may alternatively POST a started_at a
       <task_id type="integer">14</task_id>
       <spent_at type="date">Tue, 17 Oct 2006</spent_at>
     </request>
+```
 
 Note: you can transmit blank strings as started_at and ended_at if you want to start a timer against the new day_entry record. For example: <started_at> </started_at>
 
 ## DELETING AN ENTRY
 
-    DELETE /daily/delete/#{day_entry_id}
+DELETE /daily/delete/#{day_entry_id}
 
 Deletes a day entry.
 
-    HTTP Response: 200 Success
+HTTP Response: 200 Success
 
 ## UPDATING AN ENTRY
 
-    POST /daily/update/#{day_entry_id}
+POST /daily/update/#{day_entry_id}
 
 Updates the note, effort, project or task for a day entry. All sensible values are overwritten for the day entry with the data provided in your request.
 
-    HTTP Response: 200 Success
+HTTP Response: 200 Success
 
 You need to POST the following:
 
+```xml
     <request>
       <notes>New notes</notes>
       <hours>1.07</hours>
@@ -222,6 +235,7 @@ You need to POST the following:
       <project_id>52234</project_id>
       <task_id>67567</task_id>
     </request>
+```
 
 If your account uses timestamp timers, you may alternatively POST a started_at and ended_at times in lieu of hours.
 
