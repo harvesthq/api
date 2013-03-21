@@ -16,24 +16,27 @@ The Implicit Grant flow is used for client-side API consumption. Implicit Grant 
 
 To make an authorization request, direct the user to a url including your app's client_id and the proper response_type. An example URL:
 
-    https://api.harvestapp.com/oauth2/authorize ?client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &redirect_uri=https%3A%2F%2Fmyapp.com%2Fsome_path &state=optional-csrf-token &response_type=token
+https://api.harvestapp.com/oauth2/authorize ?client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &redirect_uri=https%3A%2F%2Fmyapp.com%2Fsome_path &state=optional-csrf-token &response_type=token
 
 Because this request is against api.harvestapp.com, any Harvest company can authorize access. To limit the ability to authorize access to only one subdomain, just provide that subdomain instead:
 
-    https://onlymycompany.harvestapp.com/oauth2/authorize?client_id=NMB...
+https://onlymycompany.harvestapp.com/oauth2/authorize?client_id=NMB...
 
 Upon authentication and authorization, the user will be redirected back with a URL containing the access token. With an access token, you can make authorized requests against api.harvestapp.com regardless of the user's subdomain.
 
 The URL the user is redirected back to after authorization is based on the redirect_uri parameter you passed initially. An example URL:
 
-    https://myapp.com/some_path?access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D&expires_in=64799&state=optional-csrf-token&token_type=bearer
+https://myapp.com/some_path?access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D&expires_in=64799&state=optional-csrf-token&token_type=bearer
 
 Parse the access_token from this URL, and then requests can be made with the access token:
 
+```sh
     curl 'https://api.harvestapp.com/account/who_am_i?access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D' -H 'Accept: application/json'
+```
 
 And the response:
 
+```json
     {
       "company": {
         "base-uri": "https://subdomain.harvestapp.com"
@@ -46,6 +49,7 @@ And the response:
         "email":"jim@smallbizbigplans.com" 
       }
     }
+```
 
 Access tokens are valid for 18 hours, after which the use must again visit the authorization URL to authenticate and authorize access to their account.
 
@@ -57,51 +61,59 @@ The Authorization Code flow allows server-side applications to make requests on 
 
 To make an authorization request, direct the user to a url including your app's client_id and the proper response_type. An example URL:
 
-    https://api.harvestapp.com/oauth2/authorize?client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D&redirect_uri=https%3A%2F%2Fmyapp.com%2Fsome_path&state=optional-csrf-token&response_type=code
+https://api.harvestapp.com/oauth2/authorize?client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D&redirect_uri=https%3A%2F%2Fmyapp.com%2Fsome_path&state=optional-csrf-token&response_type=code
 
 Because this request is against api.harvestapp.com, any Harvest company can authorize access. To limit the ability to authorize access to only one subdomain, just provide that subdomain instead:
 
-    https://onlymycompany.harvestapp.com/oauth2/authorize?client_id=NMB...
+https://onlymycompany.harvestapp.com/oauth2/authorize?client_id=NMB...
 
 Upon authentication and authorization, the user will be redirected back with a URL containing an authorization code. This code must then be exchanged for a refresh and access token using a server-side request and the client's secret key.
 
 The user is redirected back to the redirect_uri parameter you passed after authorization. An example URL:
 
-    https://myapp.com/some_path?code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D&state=optional-csrf-token
+https://myapp.com/some_path?code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D&state=optional-csrf-token
 
 Parse the code from this URL, then make a request for tokens. The request should be a POST request to https://api.harvestapp.com/oauth2/token with the following parameters:
 
+```http
     code:          #{the code returned from the authorization request}
     client_id:     #{your app's client id}
     client_secret: #{your app's secret}
     redirect_uri:  #{the same redirect_uri passed during the authorization request}
     grant_type:    authorization_code
+```
 
 This request will return an access and refresh token for you to make authorized requests with.
 
+```json
     {
       "token_type": "bearer",
       "expires_in": 64799,
       "access_token": "MDt6UyMCrY4h0tAQTxvynShtjddS64fyVcSYge2S7rSUT4vPy9Ny5TWa1sltXS2BjsF+uJgDKof+V2yQwdhI9Q==",
       "refresh_token": "GOk4bZ4bVcP4nqo071H9qxbX+c+UtLa1jMB7q1lpc1Y9/Me9GHlsQr8zm1VNSlS7lgm/DKjXdgFlwgj2WI6zCg=="
     }
+```
 
 The access token can be used for requests as described in the Implicit Grant flow.
 
 Refresh tokens can be used to request new access and refresh tokens with later expiration times. Getting fresh tokens is similar to exchanging your authorization code for tokens. Make a POST request to https://api.harvestapp.com/oauth2/token with the following paramenters:
 
+```http
     refresh_token: #{the current refresh token}
     client_id:     #{your app's client id}
     client_secret: #{your app's secret}
     grant_type:    refresh_token
+```
 
 And the response is the same as when exchanging a code for tokens:
 
+```json
     {
       "token_type": "bearer",
       "expires_in": 64799,
       "access_token": "ZWg6ru2KFzWv/fT9emMRlIvhADN85OWjeIKLdXZwlMZ7YUvgyVjdJZN8f2ydIfJhNhrJPBGvOtxYd3lHkvTWZg==",
       "refresh_token": "dwxM/Cf8E1mkiWtKHQEk7qEW4vXGzUH/JBm5Sra4Bnn6KVcGaqy6D7QipGe3OhelK66lYPnjLFSKc5BMvEVjRw=="
     }
+```
 
 Refresh tokens are valid for 1 month after the date they are issued.
