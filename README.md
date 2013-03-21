@@ -38,9 +38,9 @@ When the rate limit is exceeded Harvest will send an HTTP 503 status code. The n
 
 Throughout our documentation you'll find the following set of notational conventions:
 
-    #{expression}: Should be substituted with the value of the expression. Example: /#{project_id} should be replaced with /12345 (assuming your project_id = 12345)
-    ...: For brevity we have skipped repetitive parts of the response.
-    <!-- Comment -->: Optional comment in the response added for clarity. The actual response will not contain comments.
+ #{expression}: Should be substituted with the value of the expression. Example: /#{project_id} should be replaced with /12345 (assuming your project_id = 12345)
+ ...: For brevity we have skipped repetitive parts of the response.
+ <!-- Comment -->: Optional comment in the response added for clarity. The actual response will not contain comments.
 
 ## Harvest API Libraries
 
