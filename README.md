@@ -14,7 +14,7 @@ You may also want to check out the open-source libraries for the Harvest API bel
 
 ## Share Your Creation
 
-If you've built something interesting with the Harvest API or the [Harvest Platform](http://www.getharvest.com/platform), share the love! Created a library or other cool connector another Harvest user might find useful? Add it to our [Community Creations and Hacks page](https://github.com/harvesthq/api/wiki/Community-Creations-&-Hacks), and contribute to the solid list of great projects people have done. If it's a connector between another app and ours, ping us at [support@harvestapp.com](mailto:support@harvestapp.com) - we may be able to list it on our [Add-ons](http://www.getharvest.com/add-ons) page.
+If you've built something interesting with the Harvest API or the [Harvest Platform](http://www.getharvest.com/platform), share the love! Created a library or other cool connector another Harvest user might find useful? Add it to our [Community Creations and Hacks page](https://github.com/harvesthq/api/wiki/Community-Creations-&-Hacks), and contribute to the solid list of great projects people have made. If it's a connector between another app and ours, ping us at [support@harvestapp.com](mailto:support@harvestapp.com) - we may be able to list it on our [Add-ons](http://www.getharvest.com/add-ons) page.
 
 ## Authorization
 
