@@ -4,15 +4,16 @@ The Time tracking API allows you to access and manipulate time entries in simila
 
 ## RETRIEVING ENTRIES AND PROJECTS/TASKS FOR A DAY
 
-GET /daily
+GET `/daily`
 
 Retrieves entries for the today paired with the projects and tasks that can be added to the timesheet by the requesting user.
 
-GET /daily/#{day_of_the_year}/#{year}
+GET `/daily/#{day_of_the_year}/#{year}`
 
 Optionally you may ask for entries for a given day by passing in date composed by the year and the day of the year (1..366).
 
 HTTP Response: 200 Success
+
 ```xml
     <daily>
       <for_day type="date">Wed, 18 Oct 2006</for_day>
@@ -67,10 +68,10 @@ HTTP Response: 200 Success
       </projects>
     </daily>
 ```
-	
+
 ## RETRIEVING A SINGLE ENTRY
 
-GET /daily/show/#{day_entry_id}
+GET `/daily/show/#{day_entry_id}`
 
 Retrieves the selected entry.
 
@@ -104,7 +105,7 @@ HTTP Response: 200 Success
 
 ## TOGGLING A TIMER
 
-GET /daily/timer/#{day_entry_id}
+GET `/daily/timer/#{day_entry_id}`
 
 Starts and stops a timer for a selected entry.
 
@@ -145,7 +146,7 @@ Note: if your account uses timestamp timers, timers cannot be restarted. Instead
 
 ## CREATING AN ENTRY
 
-POST /daily/add
+POST `/daily/add`
 
 Create an entry on the daily screen
 
@@ -163,7 +164,7 @@ You need to POST the following:
     </request>
 ```
 
-Note: you can transmit a blank string as hours if you want to start a timer against the new day_entry record. For example: 
+Note: you can transmit a blank string as hours if you want to start a timer against the new day_entry record. For example:
 
 ```xml
     <hours> </hours>
@@ -211,7 +212,7 @@ Note: you can transmit blank strings as started_at and ended_at if you want to s
 
 ## DELETING AN ENTRY
 
-DELETE /daily/delete/#{day_entry_id}
+DELETE `/daily/delete/#{day_entry_id}`
 
 Deletes a day entry.
 
@@ -219,7 +220,7 @@ HTTP Response: 200 Success
 
 ## UPDATING AN ENTRY
 
-POST /daily/update/#{day_entry_id}
+POST `/daily/update/#{day_entry_id}`
 
 Updates the note, effort, project or task for a day entry. All sensible values are overwritten for the day entry with the data provided in your request.
 

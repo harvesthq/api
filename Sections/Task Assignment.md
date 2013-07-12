@@ -2,10 +2,11 @@
 
 ## GET ALL TASKS ASSIGNED TO A GIVEN PROJECT
 
-    GET /projects/#{project_id}/task_assignments
+    GET `/projects/#{project_id}/task_assignments`
 
     HTTP Response: 200 OK
 
+```xml
     <task-assignments>
       <task-assignment>
         <id type="integer">23</id>
@@ -26,19 +27,21 @@
         ...
       </task-assignment>
     </task-assignments>
+```
 
 You filter by updated_since. To show only the task assignments that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
-    GET /projects/#{project_id}/task_assignments?updated_since=2010-09-25+18%3A30
+    GET `/projects/#{project_id}/task_assignments?updated_since=2010-09-25+18%3A30`
 
     HTTP Response: 200 Success
 
 ## GET ONE TASK ASSIGNMENT
 
-    GET /projects/#{project_id}/task_assignments/#{task_assignment_id}
+    GET `/projects/#{project_id}/task_assignments/#{task_assignment_id}`
 
     HTTP Response: 200 OK
 
+```xml
     <task-assignment>
       <id type="integer">23</id>
       <project-id type="integer">3</project-id>
@@ -54,36 +57,41 @@ You filter by updated_since. To show only the task assignments that have been up
       <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
       <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
     </task-assignment>
+```
 
 ## ASSIGN A TASK TO A PROJECT
 
-    POST /projects/#{project_id}/task_assignments
+    POST `/projects/#{project_id}/task_assignments`
 
     HTTP Response: 201 Created
     Location: /projects/#{project_id}/task_assignments/#{new_task_assignment_id}
 
 You will have to post the following:
 
+```xml
     <task>
      <id type="integer">653425</id>
     </task>
+```
 
 ## CREATE A NEW TASK AND ASSIGN IT TO A PROJECT
 
-    POST /projects/#{project_id}/task_assignments/add_with_create_new_task
+    POST `/projects/#{project_id}/task_assignments/add_with_create_new_task`
 
     HTTP Response: 201 Created
     Location: /projects/#{project_id}/task_assignments/#{new_task_assignment_id}
 
 You will have to post the following:
 
+```xml
     <task>
       <name>Backend Development</name>
     </task>
+```
 
 ## REMOVING A TASK FROM A PROJECT
 
-    DELETE /projects/#{project_id}/task_assignments/#{task_assignment_id}
+    DELETE `/projects/#{project_id}/task_assignments/#{task_assignment_id}`
 
     HTTP Response: 200 OK
 
@@ -93,15 +101,17 @@ Harvest will not remove the task if it has recorded hours against the project. I
 
 ## CHANGING A TASK FOR A PROJECT
 
-    PUT /projects/#{project_id}/task_assignments/#{task_assignment_id}
+    PUT `/projects/#{project_id}/task_assignments/#{task_assignment_id}`
 
     HTTP Response: 200 Success
 
 You will have to post the following:
 
+```xml
     <task-assignment>
       <billable type="boolean">true</billable>
       <deactivated type="boolean">false</deactivated>
       <budget type="decimal">3234</budget>
       <hourly-rate type="decimal">100</hourly-rate>
     </task-assignment>
+```

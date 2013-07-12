@@ -4,10 +4,11 @@ Important: this assumes that the invoice feature is enabled for your account (vi
 
 ## SHOW RECENTLY ISSUED INVOICES
 
-    GET /invoices
+    GET `/invoices`
 
     HTTP Response: 200 Success
 
+```xml
     <invoices type="array">
       <invoice>
         <id type="integer">1234567</id>
@@ -52,6 +53,7 @@ Important: this assumes that the invoice feature is enabled for your account (vi
       </invoice>
       ...
     </invoices>
+```
 
 The state attribute may be open for unpaid, sent invoices (either current or past due), draft, partial for invoices with partial payments, paid for paid in full invoices, or closed for written off invoices.
 
@@ -59,27 +61,27 @@ For performance reasons line item data is not shown for this call, you'll have t
 
 By default Harvest will display 50 records per page. You can get further pages by passing in a page parameter.
 
-    GET /invoices?page=2
+    GET `/invoices?page=2`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 You can also query invoices by timeframe based on issue date.
 
-    GET /invoices?from=YYYYMMDD&to=YYYYMMDD
+    GET `/invoices?from=YYYYMMDD&to=YYYYMMDD`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 You can filter by updated_since. To show only the invoices that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
-    GET /invoices?updated_since=2010-09-25+18%3A30
+    GET `/invoices?updated_since=2010-09-25+18%3A30`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 Filtering by invoice state is also possible, for example this would return partially paid invoices:
 
-    GET /invoices?status=partial
+    GET `/invoices?status=partial`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 Other parameters for filtering by state are:
 
@@ -103,18 +105,19 @@ Macro used to return past due invoices
 
 You can also filter by client, for example to show only the invoices belonging to client with the id 23445
 
-    GET /invoices?client=23445
+    GET `/invoices?client=23445`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 All of the above filters can be combined, allowing for powerful queries into your records.
 
 ## SHOW A PARTICULAR INVOICE
 
-    GET /invoices/#{invoice_id}
+    GET `/invoices/#{invoice_id}`
 
     HTTP Response: 200 Success
 
+```xml
     <invoice>
       <amount type="decimal">253.44</amount>
       <client-id type="integer">8</client-id>
@@ -150,20 +153,22 @@ All of the above filters can be combined, allowing for powerful queries into you
       <tax-amount type="decimal">23.04</tax-amount>
       <tax2-amount type="decimal" nil="true">0</tax2-amount>
     </invoice>
+```
 
 You can build a URL to the public web invoice view using the client-key attribute:
 
-    https://<SUBDOMAIN>.harvestapp.com/client/invoices/<CLIENT-KEY>
+    `https://<SUBDOMAIN>.harvestapp.com/client/invoices/<CLIENT-KEY>`
 
 ## CREATE A NEW INVOICE
 
-    POST /invoices
+    POST `/invoices`
 
     HTTP Response: 201 Created
     Location: /invoices/#{new_id}
 
 Sample post:
 
+```xml
     <invoice>
       <due-at type="date">2008-02-06</due-at>
         <!-- human representation for due at -->
@@ -198,6 +203,7 @@ Sample post:
       <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
       <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
     </invoice>
+```
 
 Note: If no number is passed, a number will be generated automatically.
 
@@ -209,6 +215,7 @@ You can also create a free form invoice with line items by passing in the csv-li
 
 Sample post:
 
+```xml
     <invoice>
       <due-at type="date">2008-02-06</due-at>
       <due-at-human-format>due upon receipt</due-at-human-format>
@@ -227,16 +234,18 @@ Sample post:
     Service,Backend Programming / Forum admin,1.20,80.00,96.0,true,false,3
       </csv-line-items>
     </invoice>
+```
 
 ## UPDATE AN EXISTING INVOICE
 
-    PUT /invoices/#{invoice_id}
+    PUT `/invoices/#{invoice_id}`
 
-    HTTP Response: 200 OK 
+    HTTP Response: 200 OK
     Location: /invoices/#{invoice_id}
 
 Sample put:
 
+```xml
     <invoice>
       <due-at type="date">2008-02-06</due-at>
         <!-- human representation for due at -->
@@ -248,11 +257,13 @@ Sample put:
       <notes>Some notes go here</notes>
       <number>82208</number>
     </invoice>
+```
 
 You can also update the line items for the invoice by passing in the csv-line-items attribute.
 
 Sample post:
 
+```xml
     <invoice>
         <!-- if you don't know the project id, you can just leave it of from data rows ending the row with a comma. CSV header must always be intact though, or updates will be discarded. -->
       <csv-line-items>
@@ -261,11 +272,12 @@ Sample post:
     Service,What's in a name,8,100.00,800,false,false,3
       </csv-line-items>
     </invoice>
+```
 
 Not all attributes need to be passed in, Harvest supports selective updates.
 
 ## DELETE EXISTING INVOICE
 
-    DELETE /invoices/#{invoice_id}
+    DELETE `/invoices/#{invoice_id}`
 
     HTTP Response: 200 OK.

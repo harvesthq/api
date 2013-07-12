@@ -6,10 +6,11 @@ The reporting API endpoints described here are only available to administrator u
 
 ## GET ALL TIME ENTRIES LOGGED TO A PROJECT FOR A GIVEN TIMEFRAME
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD`
 
     HTTP Response: 200 Success
 
+```xml
     <day-entries>
       <day-entry>
         <hours type="decimal">0.3</hours>
@@ -31,45 +32,47 @@ The reporting API endpoints described here are only available to administrator u
       </day-entry>
       ...
     </day-entries>
+```
 
 This call requires parameters (from and to) to describe the timeframe to use for a report.
 
 ## GET ALL TIME ENTRIES BY THE CURRENT USER LOGGED TO A PROJECT FOR A GIVEN TIMEFRAME
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&user_id=#{user_id}
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&user_id=#{user_id}`
 
 This call requires parameters (from, to) to describe the timeframe to use for a report. This method can be used to view your own entries on a specific project.
 
 ## FILTERING
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&billable=yes
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&billable=yes`
 
 Acceptable values for the billable parameter are "yes" and "no".
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes`
 
 Acceptable value for the only_billed parameter is "yes". Anything else will be ignored.
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes`
 
 Acceptable value for the only_unbilled parameter is "yes". Anything else will be ignored.
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&is_closed=no
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&is_closed=no`
 
 Acceptable values for the is_closed parameter are "yes" and "no".
 
-    GET /projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&updated_since=2010-09-25+18%3A30
+    GET `/projects/#{project_id}/entries?from=YYYYMMDD&to=YYYYMMDD&updated_since=2010-09-25+18%3A30`
 
 Acceptable value for the updated_since parameter is a UTC date time value, URL encoded.
 
-    GET /projects/#{project_id}/entries?user_id=1334
+    GET `/projects/#{project_id}/entries?user_id=1334`
 
 ## GET ALL TIME ENTRIES LOGGED BY A USER FOR A GIVEN TIMEFRAME
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD`
 
     HTTP Response: 200 Success
 
+```xml
     <day-entries>
       <day-entry>
         <hours type="decimal">0.2</hours>
@@ -91,12 +94,13 @@ Acceptable value for the updated_since parameter is a UTC date time value, URL e
       </day-entry>
       ...
     </day-entries>
+```
 
 This call requires parameters (from and to) to describe the timeframe to use for a report.
 
 ## GET ALL YOUR TIME ENTRIES FROM A PROJECT AND A GIVEN TIMEFRAME
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&project_id=#{project_id}
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&project_id=#{project_id}`
 
     HTTP Response: 200 Success
 
@@ -104,32 +108,33 @@ This call requires parameters (from, to and project_id) and it will return resul
 
 ## FILTERING
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&billable=yes
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&billable=yes`
 
 Acceptable values for the billable parameter are "yes" and "no".
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes`
 
 Acceptable value for the only_billed parameter is "yes". Anything else will be ignored.
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes`
 
 Acceptable value for the only_unbilled parameter is "yes". Anything else will be ignored.
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&is_closed=no
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&is_closed=no`
 
 Acceptable values for the is_closed parameter are "yes" and "no".
 
-    GET /people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&updated_since=2010-09-25+18%3A30
+    GET `/people/#{user_id}/entries?from=YYYYMMDD&to=YYYYMMDD&updated_since=2010-09-25+18%3A30`
 
 Acceptable value for the updated_since parameter is a UTC date time value, URL encoded.
 
 ## GET ALL EXPENSE ENTRIES LOGGED BY A USER FOR A GIVEN TIMEFRAME
 
-    GET /people/#{user_id}/expenses?from=YYYYMMDD&to=YYYYMMDD
+    GET `/people/#{user_id}/expenses?from=YYYYMMDD&to=YYYYMMDD`
 
     HTTP Response: 200 Success
 
+```xml
     <expenses>
       <expense>
         <expense-category-id type="integer">50543</expense-category-id>
@@ -150,27 +155,29 @@ Acceptable value for the updated_since parameter is a UTC date time value, URL e
       </expense>
       ...
     </expenses>
+```
 
 This call requires parameters (from and to) to describe the timeframe to use for a report.
 
 You can filter by is_closed status, for example to show only the expenses that have not yet been approved by an administrator. Acceptable values are "yes" and "no".
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?is_closed=no
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?is_closed=no`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 You can also filter by updated_since. To show only the expenses that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?updated_since=2010-09-25+18%3A30
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?updated_since=2010-09-25+18%3A30`
 
     HTTP Response: 200 Success
 
 ## GET ALL EXPENSE ENTRIES LOGGED TO A PROJECT FOR A GIVEN TIMEFRAME
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD`
 
     HTTP Response: 200 Success
 
+```xml
     <expenses>
       <expense>
         <expense-category-id type="integer">50543</expense-category-id>
@@ -191,31 +198,32 @@ You can also filter by updated_since. To show only the expenses that have been u
       </expense>
       ...
     </expenses>
+```
 
 This call requires parameters (from and to) to describe the timeframe to use for a report.
 
 You can filter by is_closed, only_billed or only_unbilled status, for example to show only the expenses that have not yet been approved by an administrator. Acceptable values are "yes" and "no".
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?is_closed=no
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?is_closed=no`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD&only_billed=yes`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 Acceptable value for the only_billed parameter is "yes". Anything else will be ignored.
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD&only_unbilled=yes`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 Acceptable value for the only_unbilled parameter is "yes". Anything else will be ignored.
 
 You can also filter by updated_since. To show only the expenses that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
-    GET /projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?updated_since=2010-09-25+18%3A30
+    GET `/projects/#{project_id}/expenses?from=YYYYMMDD&to=YYYYMMDD?updated_since=2010-09-25+18%3A30`
 
-    HTTP Response: 200 Success 
+    HTTP Response: 200 Success
 
 In conjunction with the reporting calls, you may wish to retrieve all users, projects, expense categories and tasks to convert numeric IDs to users, projects, tasks, and expense categories.

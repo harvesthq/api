@@ -2,10 +2,11 @@
 
 ## SHOW A USER
 
-    GET /people/#{user_id}
+    GET `/people/#{user_id}`
 
     HTTP Response: 200 Success
 
+```xml
     <user>
       <id type="integer">54234</id>
       <email>Jane@Doe.com</email>
@@ -27,14 +28,16 @@
       <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
       <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
     </user>
+```
 
 Note: You may also pass a user's email address in place of a user_id.
 
 ## SHOW ALL USERS
 
-    GET /people
+    GET `/people`
     HTTP Response: 200 Success
 
+```xml
     <users>
       <user>
         <id type="integer">54234</id>
@@ -58,22 +61,24 @@ Note: You may also pass a user's email address in place of a user_id.
         <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
        </user>
     </users>
+```
 
 You can filter by updated_since. To show only the people that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
-    GET /people?updated_since=2010-09-25+18%3A30
+    GET `/people?updated_since=2010-09-25+18%3A30`
 
     HTTP Response: 200 Success
 
 ## CREATE NEW USER
 
-    POST /people
+    POST `/people`
 
-    HTTP Response: 201 Created 
+    HTTP Response: 201 Created
     Location: /people/#{new_user_id}
 
 Sample post:
 
+```xml
     <user>
       <first-name>Edgar</first-name>
       <last-name>Ruth</last-name>
@@ -82,6 +87,7 @@ Sample post:
       <is-admin type="boolean">false</is-admin>
       <telephone>444-444</telephone>
     </user>
+```
 
 Upon creation, an email will be sent to the new user with instructions for setting a password.
 
@@ -89,19 +95,20 @@ Note: we accept only a limited set of values for the timezone attribute.
 
 ## RESET PASSWORD FOR USER
 
-    POST /people/#{user_id}/reset_password
+    POST `/people/#{user_id}/reset_password`
 
 Harvest will send an email with instructions for resetting a password to the user. All other API calls will ignore changes to the password attribute.
 
 ## UPDATE USER
 
-    PUT /people/#{user_id}
+    PUT `/people/#{user_id}`
 
     HTTP Response: 200 OK
     Location: /people/#{user_id}
 
 You can update selected attributes for a user. Note that updates to password are disregarded.
 
+```xml
     <user>
       <first_name>John</first-name>
       <last_name>Doe</last-name>
@@ -110,17 +117,18 @@ You can update selected attributes for a user. Note that updates to password are
       <is_admin type="boolean">true</is-admin>
       <telephone>212-555-1212</telephone>
     </user>
+```
 
 ## DELETE EXISTING USER
 
-    DELETE /people/#{user_id}
+    DELETE `/people/#{user_id}`
 
-    HTTP Response: 200 OK 
+    HTTP Response: 200 OK
 
 Returned if user does not have any hours logged. Otherwise the user is not removable and HTTP Response: 400 Bad Request is returned. You can still archive the user to disable the user's login.
 
 ## TOGGLE AN EXISTING USER
 
-    POST /people/#{user_id}/toggle
+    POST `/people/#{user_id}/toggle`
 
 This will archive an active user or activate an archived user. Note that activation is not performed if it results in more users allowed than the plan limit. Response is HTTP Response: 400 Bad Request or in case of success HTTP Response: 200 OK

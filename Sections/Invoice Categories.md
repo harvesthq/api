@@ -6,10 +6,11 @@ Here you can change the categories appearing before each line item on your invoi
 
 ## SHOW ALL INVOICE ITEM CATEGORIES
 
-    GET /invoice_item_categories
+    GET `/invoice_item_categories`
 
     HTTP Response: 200 Success
 
+```xml
     <invoice-item-categories type="array">
       <invoice-item-category>
         <id type="integer">39353</id>
@@ -31,38 +32,43 @@ Here you can change the categories appearing before each line item on your invoi
       </invoice-item-category>
       ...
     </invoice-item-categories>
+```
 
 ## CREATE NEW INVOICE ITEM CATEGORY
 
-    POST /invoice_item_categories
+    POST `/invoice_item_categories`
 
     HTTP Response: 201 Created
     Location: /invoice_categories/#{new_category_id}
 
 Sample post:
 
+```xml
     <invoice-item-category>
       <name>Entertainment</name>
     </invoice-item-category>
+```
 
 ## UPDATE AN EXISTING CATEGORY
 
-    PUT /invoice_item_categories/#{category_id}
+    PUT `/invoice_item_categories/#{category_id}`
 
-    HTTP Response: 200 OK 
+    HTTP Response: 200 OK
     Location: /invoice_item_categories/#{category_id}
 
 Sample put:
 
+```xml
     <invoice-item-category>
       <name>Entertainment</name>
     </invoice-item-category>
+```
 
 ## DELETE EXISTING CATEGORY
 
-    DELETE /invoice_item_categories/#{expense_category_id}
+    DELETE `/invoice_item_categories/#{expense_category_id}`
 
-    HTTP Response: 200 OK. 
-    HTTP Response: 400 Bad Request 
+    HTTP Response: 200 OK.
+    HTTP Response: 400 Bad Request
 
 Returned if category is not removable (default categories can only be edited).
