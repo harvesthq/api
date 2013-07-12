@@ -30,9 +30,10 @@ https://yourapp.com/redirect_path ?
 ```
 
 3. *Request an access token* using the authorization code.
-```http
-POST https://api.harvestapp.com/oauth2/token
-```
+
+POST `https://api.harvestapp.com/oauth2/token`
+
+
 ```json
 {
   code:          [authorization code from Harvest]
@@ -43,6 +44,7 @@ POST https://api.harvestapp.com/oauth2/token
 }
 ```
 4. *Get the access and refresh tokens* from the response.
+
 ```json
 {
     "token_type": "bearer",
@@ -53,15 +55,14 @@ POST https://api.harvestapp.com/oauth2/token
 ```
 
 5. *Use the access token* to send authorized requests to the Harvest API.
-```http
-GET https://api.harvestapp.com/account/who_am_i ?
-    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
-```
+
+GET `https://api.harvestapp.com/account/who_am_i ?
+    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D`
 
 6. *Request a new access token* after 18 hours using the refresh token within 30 days.
-```http
-POST https://api.harvestapp.com/oauth2/token
-```
+
+POST `https://api.harvestapp.com/oauth2/token`
+
 ```json
 {
   refresh_token: [user's refresh token]
@@ -71,6 +72,7 @@ POST https://api.harvestapp.com/oauth2/token
 }
 ```
 7. *Get the new tokens* from the response.
+
 ```json
 {
   "token_type": "bearer",
@@ -85,26 +87,24 @@ POST https://api.harvestapp.com/oauth2/token
 Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oauth-v2-22#section-4.2) for client-side authorization.
 
 1. *Redirect users to Harvest* to authorize their accounts with your application.
-```http
-GET https://api.harvestapp.com/oauth2/authorize ?
+
+GET `https://api.harvestapp.com/oauth2/authorize ?
     client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
     redirect_uri=https%3A%2F%2Fyourapp.com%2Fredirect_path &
     state=optional-csrf-token &
-    response_type=token
-```
+    response_type=token`
+
 To limit access to a single Harvest account, you can specify its web address instead of api.harvestapp.com.
 
 2. *Get the access token* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
-```http
-https://yourapp.com/redirect_path ?
+
+GET `https://yourapp.com/redirect_path ?
     access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
     expires_in=64799 &
     state=optional-csrf-token &
-    token_type=bearer
-```
+    token_type=bearer`
 
 3. *Use the access token* to send authorized requests to the Harvest API.
-```http
-GET https://api.harvestapp.com/account/who_am_i ?
-    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
-```
+
+GET `https://api.harvestapp.com/account/who_am_i ?
+    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D`
