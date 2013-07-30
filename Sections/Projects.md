@@ -75,13 +75,13 @@ HTTP Response: 200 Success
 </projects>
 ```
 
-You can filter by client or any number of other properties. For example to show only the projects belonging to client with the id 23445
+You can filter by client_id and updated_since. For example to show only the projects belonging to client with the id 23445.
 
 GET `/projects?client=23445`
 
 HTTP Response: 200 Success
 
-You can also filter by updated_since. To show only the projects that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
+To show only the projects that have been updated since "2010-09-25 18:30", pass the UTC date time value (URL encoded).
 
 GET `/projects?updated_since=2010-09-25+18%3A30`
 
