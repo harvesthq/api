@@ -4,7 +4,7 @@ Harvest provides two API interfaces, serving two distinct roles. If you need to 
 
 If you need to access and edit your projects, clients, users and tasks the extended API is your choice. You can use this to mass import your existing projects setup, add users and generally integrate with your existing back-office setup.
 
-Remember to write your application carefully, caching when possible. In case of abuse you may be blocked, disallowing further API access. As an act of courtesy please provide User-Agent strings denoting your application.
+Remember to write your application carefully, caching when possible. In case of abuse you may be blocked, disallowing further API access. As an act of courtesy, please provide User-Agent strings denoting your application.
 
 ## Sample Code & Examples
 
@@ -14,7 +14,7 @@ You may also want to check out the open-source libraries for the Harvest API bel
 
 ## Share Your Creation
 
-If you've built something interesting with the Harvest API or the [Harvest Platform](http://www.getharvest.com/platform), share the love! Created a library or other cool connector another Harvest user might find useful? Add it to our [Community Creations and Hacks page](https://github.com/harvesthq/api/wiki/Community-Creations-&-Hacks), and contribute to the solid list of great projects people have made. If it's a connector between another app and ours, ping us at [support@harvestapp.com](mailto:support@harvestapp.com) - we may be able to list it on our [Add-ons](http://www.getharvest.com/add-ons) page.
+If you've built something interesting with the Harvest API or the [Harvest Platform](http://www.getharvest.com/platform), share the love! Created a library or other cool connector another Harvest user might find useful? Add it to our [Community Creations and Hacks page](https://github.com/harvesthq/api/wiki/Community-Creations-&-Hacks), and contribute to the solid list of great projects people have made. If it's a connector between another app and ours, ping us at [support@harvestapp.com](mailto:support@harvestapp.com) — we may be able to list it on our [Add-ons](http://www.getharvest.com/add-ons) page.
 
 ## Authorization
 
@@ -26,7 +26,7 @@ Harvest will check your role on each request, and actions that are unavailable t
 
 The Harvest API supports both XML and JSON data formats.
 
-For an XML request, send application/xml in the Accept and Content-Type headers. Send application/json for JSON responses. All examples in this documentation assume XML input and output, however JSON output follows similar structure to the XML documented.
+For an XML request, send `application/xml` in the `Accept` and `Content-Type` headers. Send `application/json` for JSON responses. All examples in this documentation assume XML input and output, however JSON output follows similar structure to the XML documented.
 
 ## Throttle Limit - HTTP 503
 
@@ -34,15 +34,17 @@ We have an API throttle that blocks accounts emitting more than 100 calls per 15
 
 For batch processes and API developers who still need to perfect their code, this throttle may be an inadvertent blocker. Just wait and make no API calls (the throttle is reset with each call). The throttle will lift itself in few minutes and API calls may resume.
 
-When the rate limit is exceeded Harvest will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in [RFC 2616](http://tools.ietf.org/html/rfc2616#section-14.37). You can use GET /account/rate_limit_status to programmatically query your current throttle status.
+When the rate limit is exceeded Harvest will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the `Retry-After` HTTP header, as specified in [RFC 2616](http://tools.ietf.org/html/rfc2616#section-14.37). You can use `GET /account/rate_limit_status` to programmatically query your current throttle status.
 
 ## Notational Conventions
 
 Throughout our documentation you'll find the following set of notational conventions:
 
- #{expression}: Should be substituted with the value of the expression. Example: /#{project_id} should be replaced with /12345 (assuming your project_id = 12345)
- ...: For brevity we have skipped repetitive parts of the response.
- <!-- Comment -->: Optional comment in the response added for clarity. The actual response will not contain comments.
+* `#{expression}`: Should be substituted with the value of the expression. For example, `/#{project_id}` should be replaced with `/12345` (assuming your `project_id` is 12345)
+
+* `...`: For brevity, we have skipped repetitive parts of the response.
+
+* `<!-- Comment -->`: Optional comment in the response added for clarity. The actual response will not contain comments.
 
 ## Harvest API Libraries
 
@@ -60,4 +62,4 @@ We also have sample scripts in several languages. These scripts depict authentic
 
 ## Have More Questions?
 
-Please email us at: [support@harvestapp.com](mailto:support@harvestapp.com).
+Please email us at [support@harvestapp.com](mailto:support@harvestapp.com).
