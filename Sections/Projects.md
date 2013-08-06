@@ -9,29 +9,35 @@ HTTP Response: 200 Success
 ```xml
 <project>
   <name>SuprGlu</name>
-  <over-budget-notified-at type="date" nil="true"></over-budget-notified-at>
-  <billable type="boolean">false</billable>
-  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
-    <!-- True if hours can be recorded against this project. False if project is archived/inactive -->
-  <active type="boolean">true</active>
-    <!-- Shows if the project is billed by task hourly rate or
-   person hourly rate. Options: Tasks, People, none -->
-  <bill-by>none</bill-by>
-  <client-id type="integer">2</client-id>
-    <!-- Optional project code -->
-  <code></code>
-  <notes></notes>
-    <!-- Shows if the budget provided by total project hours, total project cost, by tasks, by people or none provided. Options: project, project_cost, task, person, none -->
-  <budget-by>none</budget-by>
-    <!-- Optional total budget in hours -->
-  <budget type="decimal"></budget>
-    <!-- These are hints to when the earliest and latest date when a timesheet record or an expense was created for a project. Note that these fields are only updated once every 24 hours, they are usuful to constructing a full project timeline. -->
-  <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
-  <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
-    <!-- FOR FUTURE USE -->
-  <fees></fees>
   <id type="integer">1</id>
+  <client-id type="integer">2</client-id>
+  <code>HA-0001</code>
+  <active type="boolean">true</active>
+  <notes nil="true"/>
+  <billable type="boolean">false</billable>
+  <!-- Shows if the project is billed by task hourly rate or
+       person hourly rate. Options: Tasks, People, none -->
+  <bill-by>none</bill-by>
+  <cost-budget type="decimal">1000.0</cost-budget>
+  <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
+  <hourly-rate nil="true"/>
+  <!-- Shows if the budget provided by total project hours,
+       total project cost, by tasks, by people or none provided.
+       Options: project, project_cost, task, person, none -->
+  <budget-by>project</budget-by>
+  <budget type="decimal">40.0</budget>
+  <notify-when-over-budget type="boolean">true</notify-when-over-budget>
+  <over-budget-notification-percentage type="decimal">80.0</over-budget-notification-percentage>
+  <over-budget-notified-at nil="true"/>
+  <show-budget-to-all type="boolean">true</show-budget-to-all>
+  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
   <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+  <!-- These are hints to when the earliest and latest date when a
+       timesheet record or an expense was created for a project. Note
+       that these fields are only updated once every 24 hours, they
+       are useful to constructing a full project timeline. -->
+  <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
+  <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
 </project>
 ```
 
@@ -44,30 +50,36 @@ HTTP Response: 200 Success
 ```xml
 <projects>
   <project>
-    <id type="integer">1</id>
     <name>SuprGlu</name>
-      <!-- True if hours can be recorded against this project. False if project is archived/inactive -->
-    <active type="boolean">true</active>
-    <billable type="boolean">false</billable>
-      <!-- Shows if the project is billed by task hourly rate or person hourly rate. Options: Tasks, People, Project, none -->
-    <bill-by>none</bill-by>
-      <!-- The hourly rate for the project, when bill-by is set to "Project" -->
-    <hourly-rate type="decimal">150.0</hourly-rate>
+    <id type="integer">1</id>
     <client-id type="integer">2</client-id>
-      <!-- Optional project code -->
-    <code></code>
-    <notes></notes>
-      <!-- Shows if the budget provided by total project hours, total project cost, by tasks, by people or none provided. Options: project, project_cost, task, person, none -->
-    <budget-by>none</budget-by>
-      <!-- Optional total budget in hours -->
-    <budget type="decimal"></budget>
-      <!-- These are hints to when the earliest and latest date when a timesheet record or an expense was created for a project. Note that these fields are only updated once every 24 hours, they are usuful to constructing a full project timeline. -->
-    <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
-    <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
-      <!-- FOR FUTURE USE -->
-    <fees></fees>
-    <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+    <code>HA-0001</code>
+    <active type="boolean">true</active>
+    <notes nil="true"/>
+    <billable type="boolean">false</billable>
+    <!-- Shows if the project is billed by task hourly rate or
+         person hourly rate. Options: Tasks, People, none -->
+    <bill-by>none</bill-by>
+    <cost-budget type="decimal">1000.0</cost-budget>
+    <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
+    <hourly-rate nil="true"/>
+    <!-- Shows if the budget provided by total project hours,
+         total project cost, by tasks, by people or none provided.
+         Options: project, project_cost, task, person, none -->
+    <budget-by>project</budget-by>
+    <budget type="decimal">40.0</budget>
+    <notify-when-over-budget type="boolean">true</notify-when-over-budget>
+    <over-budget-notification-percentage type="decimal">80.0</over-budget-notification-percentage>
+    <over-budget-notified-at nil="true"/>
+    <show-budget-to-all type="boolean">true</show-budget-to-all>
     <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
+    <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+    <!-- These are hints to when the earliest and latest date when a
+         timesheet record or an expense was created for a project. Note
+         that these fields are only updated once every 24 hours, they
+         are useful to constructing a full project timeline. -->
+    <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
+    <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
   </project>
   <project>
     ...
