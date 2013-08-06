@@ -12,6 +12,10 @@ To help you get started with the Harvest API, we have provided sample scripts in
 
 You may also want to check out the open-source libraries for the Harvest API below.
 
+## Keep up-to-date with changes to the Harvest API
+
+Watch the Harvest API repository to receive email notification of updates to the API documentation. Find out when we've made tweaks to our documentation simply by clicking the eye symbol/watch selection in the upper right of this page.
+
 ## Share Your Creation
 
 If you've built something interesting with the Harvest API or the [Harvest Platform](http://www.getharvest.com/platform), share the love! Created a library or other cool connector another Harvest user might find useful? Add it to our [Community Creations and Hacks page](https://github.com/harvesthq/api/wiki/Community-Creations-&-Hacks), and contribute to the solid list of great projects people have made. If it's a connector between another app and ours, ping us at [support@harvestapp.com](mailto:support@harvestapp.com) — we may be able to list it on our [Add-ons](http://www.getharvest.com/add-ons) page.
