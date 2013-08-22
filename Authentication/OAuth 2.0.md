@@ -65,6 +65,8 @@ GET https://api.harvestapp.com/account/who_am_i ?
     access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
 ```
 
+**remember to set the `Content-Type` and `Accept` headers for this request**
+
 6. *Request a new access token* after 18 hours using the refresh token within 30 days.
 
 ```
