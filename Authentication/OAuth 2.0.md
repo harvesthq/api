@@ -26,9 +26,11 @@ To limit access to a single Harvest account, you can specify its web address ins
 
 2. *Get the authorization code* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
 
-GET `https://yourapp.com/redirect_path ?
+```
+GET https://yourapp.com/redirect_path ?
     code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
-    state=optional-csrf-token`
+    state=optional-csrf-token
+```
 
 3. *Request an access token* using the authorization code.
 
