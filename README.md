@@ -26,7 +26,7 @@ Harvest will check your role on each request, and actions that are unavailable t
 
 The Harvest API supports both XML and JSON data formats.
 
-For an XML request, send `application/xml` in the `Accept` and `Content-Type` headers. Send `application/json` for JSON responses. All examples in this documentation assume XML input and output, however JSON output follows similar structure to the XML documented.
+For an XML request, send `application/xml` in the `Accept` and `Content-Type` headers. Send `application/json` for JSON responses. All examples in this documentation assume XML input and output. JSON output follows similar structure to the XML documented, with the notable exception that '-' are typically '_' (for example projects require a client_id rather than client-id).
 
 ## Throttle Limit - HTTP 503
 
