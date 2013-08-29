@@ -21,6 +21,7 @@ HTTP Response: 200 Success
     <period-end type="date" nil="true"></period-end>
     <period-start type="date" nil="true"></period-start>
     <client-id type="integer">46066</client-id>
+    <subject>Invoice for project X</subject>
       <!-- see  -->
     <currency>United States Dollars - USD</currency>
     <issued-at type="date">2008-02-06</issued-at>
@@ -121,6 +122,7 @@ HTTP Response: 200 Success
 <invoice>
   <amount type="decimal">253.44</amount>
   <client-id type="integer">8</client-id>
+  <subject>Invoice for Project X</subject>
   <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
   <currency>United States Dollars - USD</currency>
   <due-amount type="decimal">253.44</due-amount>
