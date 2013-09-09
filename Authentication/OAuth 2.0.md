@@ -14,32 +14,37 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
 
 1. *Redirect users to Harvest* to authorize their accounts with your application.
 
-GET `https://api.harvestapp.com/oauth2/authorize ?
+```
+GET https://api.harvestapp.com/oauth2/authorize ?
     client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
     redirect_uri=https%3A%2F%2Fyourapp.com%2Fredirect_path &
     state=optional-csrf-token &
-    response_type=code`
+    response_type=code
+```
 
 To limit access to a single Harvest account, you can specify its web address instead of api.harvestapp.com.
 
 2. *Get the authorization code* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
 
-GET `https://yourapp.com/redirect_path ?
+```
+GET https://yourapp.com/redirect_path ?
     code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
-    state=optional-csrf-token`
+    state=optional-csrf-token
+```
 
 3. *Request an access token* using the authorization code.
 
-POST `https://api.harvestapp.com/oauth2/token`
-
+```
+POST https://api.harvestapp.com/oauth2/token
+```
 
 ```json
 {
-  code:          [authorization code from Harvest]
-  client_id:     [your application's client ID]
-  client_secret: [your application's client secret]
-  redirect_uri:  [your application's redirect URI]
-  grant_type:    authorization_code
+  "code":          "[authorization code from Harvest]",
+  "client_id":     "[your application's client ID]",
+  "client_secret": "[your application's client secret]",
+  "redirect_uri":  "[your application's redirect URI]",
+  "grant_type":    "authorization_code"
 }
 ```
 4. *Get the access and refresh tokens* from the response.
@@ -55,19 +60,25 @@ POST `https://api.harvestapp.com/oauth2/token`
 
 5. *Use the access token* to send authorized requests to the Harvest API.
 
-GET `https://api.harvestapp.com/account/who_am_i ?
-    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D`
+```
+GET https://api.harvestapp.com/account/who_am_i ?
+    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
+```
+
+**remember to set the `Content-Type` and `Accept` headers for this request**
 
 6. *Request a new access token* after 18 hours using the refresh token within 30 days.
 
-POST `https://api.harvestapp.com/oauth2/token`
+```
+POST https://api.harvestapp.com/oauth2/token
+```
 
 ```json
 {
-  refresh_token: [user's refresh token]
-  client_id:     [your application's client ID]
-  client_secret: [your application's client secret]
-  grant_type:    refresh_token
+  "refresh_token": "[user's refresh token]",
+  "client_id":     "[your application's client ID]",
+  "client_secret": "[your application's client secret]",
+  "grant_type":    "refresh_token"
 }
 ```
 7. *Get the new tokens* from the response.
@@ -87,23 +98,29 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
 
 1. *Redirect users to Harvest* to authorize their accounts with your application.
 
-GET `https://api.harvestapp.com/oauth2/authorize ?
+```
+GET https://api.harvestapp.com/oauth2/authorize ?
     client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
     redirect_uri=https%3A%2F%2Fyourapp.com%2Fredirect_path &
     state=optional-csrf-token &
-    response_type=token`
+    response_type=token
+```
 
 To limit access to a single Harvest account, you can specify its web address instead of api.harvestapp.com.
 
 2. *Get the access token* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
 
-GET `https://yourapp.com/redirect_path ?
+```
+GET https://yourapp.com/redirect_path ?
     access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
     expires_in=64799 &
     state=optional-csrf-token &
-    token_type=bearer`
+    token_type=bearer
+```
 
 3. *Use the access token* to send authorized requests to the Harvest API.
 
-GET `https://api.harvestapp.com/account/who_am_i ?
-    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D`
+```
+GET https://api.harvestapp.com/account/who_am_i ?
+    access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
+```
