@@ -2,7 +2,7 @@
 
 Important: this assumes that the invoice feature is enabled for your account (via. "Choose Modules" on your Account Settings page).
 
-## SHOW RECENTLY ISSUED INVOICES
+## SHOW RECENTLY CREATED INVOICES
 
 GET `/invoices`
 
