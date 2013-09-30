@@ -108,10 +108,10 @@ GET https://api.harvestapp.com/oauth2/authorize ?
 
 To limit access to a single Harvest account, you can specify its web address instead of api.harvestapp.com.
 
-2. *Get the access token* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
+2. *Get the access token* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a hash parameter.
 
 ```
-GET https://yourapp.com/redirect_path ?
+GET https://yourapp.com/redirect_path #
     access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
     expires_in=64799 &
     state=optional-csrf-token &
