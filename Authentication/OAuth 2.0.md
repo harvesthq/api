@@ -126,6 +126,8 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
 
 3. *Use the access token* to send authorized requests to the Harvest API.
 
+    _Note: the `Content-Type` header for this request must be `application/json` or `application/xml`._
+
     ```
     GET https://api.harvestapp.com/account/who_am_i ?
         access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
