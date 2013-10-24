@@ -3,7 +3,7 @@
 The [OAuth 2.0](http://tools.ietf.org/html/draft-ietf-oauth-v2) standard provides your users with a secure way to access Harvest data without providing sensitive information like usernames and passwords.
 
 ### Registering Your Application
-You'll need to [register your application](https://platform.harvestapp.com/oauth2_clients) with Harvest before using OAuth 2.0 for authorization. After registering, we'll provide you with credentials that your application can use to communicate with Harvest.
+You'll need to [register your application](https://platform.harvestapp.com/oauth2_clients) with Harvest (must be logged in as an administrator on your account to access this page) before using OAuth 2.0 for authorization. After registering, we'll provide you with credentials that your application can use to communicate with Harvest.
 
 **Please note**: The [OAuth 2.0 Sample App](https://github.com/harvesthq/harvest_api_samples/blob/master/oauth/harvest_api_oauth_sample.rb) is a great starting point if you'd like to experiment with Harvest's OAuth 2.0 using your own registered client ID and secret.
 
