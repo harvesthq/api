@@ -47,7 +47,7 @@ HTTP Response: 200 Success
     <recurring-invoice-id type="integer" nil="true"></recurring-invoice-id>
       <!-- was this converted from an estimate? -->
     <estimate-id type="integer" nil="true"></estimate-id>
-      <!-- does invoice fund a retainer? -->
+      <!-- a retainer_id will only be present if the invoice funds a retainer -->
     <retainer-id type="integer">12345</retainer-id>
     <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
     <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
