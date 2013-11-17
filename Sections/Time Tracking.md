@@ -6,7 +6,7 @@ The Time tracking API allows you to access and manipulate time entries in simila
 
 GET `/daily`
 
-Retrieves entries for the today paired with the projects and tasks that can be added to the timesheet by the requesting user.
+Retrieves entries for today paired with the projects and tasks that can be added to the timesheet by the requesting user.
 
 GET `/daily/#{day_of_the_year}/#{year}`
 
