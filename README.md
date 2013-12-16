@@ -6,6 +6,10 @@ If you need to access and edit your projects, clients, users and tasks the exten
 
 Remember to write your application carefully, caching when possible. In case of abuse you may be blocked, disallowing further API access. As an act of courtesy, please provide User-Agent strings denoting your application.
 
+## Get the Help You Need
+
+Have a question about using the API? Have you noticed an error or omission in the documentation? Feel free to [open an issue](http://github.com/harvesthq/api/issues/) with your question. If you're running into problems with a specific implementation, however, it's best to [get in touch with us directly](http://www.getharvest.com/help/contact) in support (that way we can work with you, checking the logs for specific requests and responses).
+
 ## Sample Code & Examples
 
 To help you get started with the Harvest API, we have provided sample scripts in several programming languages. These scripts depict authentication and basic API actions. Visit the [Harvest API Samples GitHub project](http://github.com/harvesthq/harvest_api_samples) to take a look at the scripts.
