@@ -67,8 +67,8 @@ You will have to post the following:
 
 ```xml
 <user>
-  <id type="integer">23445<id>
-<user>
+  <id type="integer">23445</id>
+</user>
 ```
 
 ## REMOVING A USER FROM A PROJECT
