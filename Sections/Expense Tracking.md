@@ -18,7 +18,7 @@ Post the following for a standard expense with a total cost:
   <total-cost type="decimal">11.00</total-cost>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">1</expense-category-id>
-  <spent-at type="date">Sun, 10 Feb 2008</spent-at>
+  <spent-at type="date">2008-02-10</spent-at>
 </expense>
 ```
 
@@ -30,7 +30,7 @@ Post the following for an expense whose total cost is calculated via an expense 
   <units type="integer">5</units>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">3</expense-category-id>
-  <spent-at type="date">Sun, 10 Feb 2008</spent-at>
+  <spent-at type="date">2008-02-10</spent-at>
 </expense>
 ```
 
@@ -71,7 +71,7 @@ HTTP Response: 200 Success
   <total-cost type="decimal">20.00</total-cost>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">1</expense-category-id>
-  <spent-at type="date">Sun, 10 Feb 2008</spent-at>
+  <spent-at type="date">2008-02-10</spent-at>
   <has-receipt type="boolean">true</has-receipt>
   <receipt-url>https://sub.harvestapp.com/expenses/234997/receipt</receipt-url>
   <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
