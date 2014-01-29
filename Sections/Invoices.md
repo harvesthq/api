@@ -194,9 +194,9 @@ Sample post:
     <!-- comma separated project ids to gather data from, useless on free_form invoices -->
   <projects-to-invoice>3</projects-to-invoice>
     <!-- import hours useless on free_form invoices -->
-  <import-hours>yes</import-hours>
+  <import-hours>all</import-hours>
     <!-- import expenses useless on free_form invoices -->
-  <import-expenses>yes</import-expenses>
+  <import-expenses>all</import-expenses>
     <!-- invoiced period, present for generated invoices -->
   <period-end type="date">2008-03-31</period-end>
   <period-start type="date">2007-06-26</period-start>
