@@ -59,11 +59,11 @@ Throughout our documentation you'll find the following set of notational convent
 A few of our users have implemented their own Harvest API wrappers. If you plan on writing a Harvest API client, you may want to check out some of these excellent projects:
 
 * Ruby: [Harvested](https://github.com/zmoazeni/harvested), by Zach Moazeni
-* Python: [Harvest Time Tracking API Client](https://github.com/aurorasoftware/python-harvest), by Aurora Software, LLC
-* Python: [Harvest API Wrapper in Python](http://github.com/lann/Harvest), by Lann Martin and Brian Glass
-* Java: [Harvest-client](http://github.com/moffermann/harvest-client), by Mauricio Offermann
-* PHP: [HaPi - PHP Harvest API](http://labs.mdbitz.com/harvest-api/), by Matthew Denton
-* Node.js: [node-harvest](https://github.com/nrub/node-harvest), by Paul English
+* Python: [Harvest Time Tracking API Client](https://github.com/lionheart/python-harvest), by Lionheart Software
+* Python: [Harvest API Wrapper](http://github.com/lann/Harvest), by Lann Martin and Brian Glass
+* Java: [Harvest Time Tracker Console Client](http://github.com/moffermann/harvest-client), by Mauricio Offermann
+* PHP: [HaPi - PHP Harvest API](http://mdbitz.com/harvest-api/), by Matthew Denton
+* Node.js: [node-harvest](https://github.com/log0ymxm/node-harvest), by Paul English
 * Drupal: [Harvest Module for Drupal](http://drupal.org/project/harvest), by ImageX Media
 
 We also have sample scripts in several languages. These scripts depict authentication and basic API actions. Visit the [Harvest API Samples GitHub project](http://github.com/harvesthq/harvest_api_samples) to take a look at the scripts.
