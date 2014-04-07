@@ -72,6 +72,7 @@ Sample put:
 ## SHOW EXPENSE CATEGORY
 
 GET `/expense_categories/#{expense_category_id}`
+
 HTTP Response: 200 Success
 
 ```xml
