@@ -1,4 +1,4 @@
-# Expenses
+# Expense Categories
 
 ## SHOW ALL EXPENSE CATEGORIES
 
