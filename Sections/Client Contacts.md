@@ -17,7 +17,7 @@ HTTP Response: 200 Success
     <client-id type="integer">11072</client-id>
     <fax>555.555.9999</fax>
     <last-name>Doe</last-name>
-    <email>Jane@Doe.com</email>
+    <email>janedoe@example.com</email>
     <first-name>Jane</first-name>
     <phone-mobile>555.555.7777</phone-mobile>
   </contact>
@@ -47,7 +47,7 @@ HTTP Response: 200 Success
     <client-id type="integer">11072</client-id>
     <fax>555.555.9999</fax>
     <last-name>Doe</last-name>
-    <email>Jane@Doe.com</email>
+    <email>janedoe@example.com</email>
     <first-name>Jane</first-name>
     <phone-mobile>555.555.7777</phone-mobile>
   </contact>
@@ -76,7 +76,7 @@ HTTP Response: 200 Success
   <client-id type="integer">11072</client-id>
   <fax>555.555.9999</fax>
   <last-name>Doe</last-name>
-  <email>Jane@Doe.com</email>
+  <email>janedoe@example.com</email>
   <first-name>Jane</first-name>
   <phone-mobile>555.555.7777</phone-mobile>
 </contact>
@@ -95,7 +95,7 @@ You need to post the following:
 ```xml
 <contact>
   <client-id type="integer">9</client-id>
-  <email>Jane@Doe.com</email>
+  <email>janedoe@example.com</email>
   <first-name>Jane</first-name>
   <last-name>Doe</last-name>
   <phone-office>555.555.5555</phone-office>
@@ -120,7 +120,7 @@ You can update selected attributes for a client contact.
 ```xml
 <contact>
   <client-id type="integer">9</client-id>
-  <email>Jane@JaneDoe.com</email>
+  <email>jdoe@example.com</email>
   <first-name>Jane</first-name>
   <last-name>Doe</last-name>
   <phone-office>555.555.1111</phone-office>

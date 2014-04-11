@@ -17,7 +17,7 @@ HTTP Response: 200 Success
     <notes>check</notes>
     <paid-at type="datetime">2008-02-14T00:00:00Z</paid-at>
     <recorded-by>Happy Owner</recorded-by>
-    <recorded-by-email>happy@owner.com</recorded-by-email>
+    <recorded-by-email>happyowner@example.com</recorded-by-email>
     <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
     <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
   </payment>
@@ -38,7 +38,7 @@ HTTP Response: 200 Success
   <notes>Finally.</notes>
   <paid-at type="datetime">2008-02-14T00:00:00Z</paid-at>
   <recorded-by>Happy Owner</recorded-by>
-  <recorded-by-email>happy@owner.com</recorded-by-email>
+  <recorded-by-email>happyowner@example.com</recorded-by-email>
   <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
   <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
 </payment>
