@@ -9,7 +9,7 @@ HTTP Response: 200 Success
 ```xml
 <user>
   <id type="integer">54234</id>
-  <email>Jane@Doe.com</email>
+  <email>janedoe@example.com</email>
   <first-name>Jane</first-name>
   <last-name>Doe</last-name>
     <!-- If true the user will be added to all new projects automatically -->
@@ -42,7 +42,7 @@ HTTP Response: 200 Success
 <users>
   <user>
     <id type="integer">54234</id>
-    <email>Jane@Doe.com</email>
+    <email>janedoe@example.com</email>
     <first-name>Jane</first-name>
     <last-name>Doe</last-name>
       <!-- If true the user will be added to all new projects automatically -->
@@ -84,7 +84,7 @@ Sample post:
 <user>
   <first-name>Edgar</first-name>
   <last-name>Ruth</last-name>
-  <email>edgar@ruth.com</email>
+  <email>edgarruth@example.com</email>
   <timezone>Central Time (US &amp; Canada)</timezone>
   <is-admin type="boolean">false</is-admin>
   <telephone>444-444</telephone>
@@ -115,7 +115,7 @@ You can update selected attributes for a user. Note that updates to password are
 <user>
   <first_name>John</first-name>
   <last_name>Doe</last-name>
-  <email>john@doe.com</email>
+  <email>johndoe@example.com</email>
   <timezone>Central Time (US & Canada)</timezone>
   <is_admin type="boolean">true</is-admin>
   <telephone>212-555-1212</telephone>

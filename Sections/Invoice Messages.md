@@ -19,9 +19,9 @@ HTTP Response: 200 Success
     <invoice-id type="integer">1420</invoice-id>
     <send-me-a-copy type="boolean">true</send-me-a-copy>
     <sent-by>My Name</sent-by>
-    <sent-by-email>my@email.com</sent-by-email>
-      <!-- comma separated list of recipient email addresses using the "Name <emai@domain.com>" format -->
-    <full-recipient-list>Jane Doe &lt;jane@doe.org&gt;,My Name &lt;my@email.com&gt;</full-recipient-list>
+    <sent-by-email>myemail@example.com</sent-by-email>
+      <!-- comma separated list of recipient email addresses using the "Name <username@example.com>" format -->
+    <full-recipient-list>Jane Doe &lt;janedoe@example.org&gt;,My Name &lt;myemail@example.com&gt;</full-recipient-list>
     <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
     <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
   </invoice-message>
@@ -43,8 +43,8 @@ HTTP Response: 200 Success
   <invoice-id type="integer">1420</invoice-id>
   <send-me-a-copy type="boolean">true</send-me-a-copy>
   <sent-by>My Name</sent-by>
-  <sent-by-email>my@email.com</sent-by-email>
-  <full-recipient-list>Jane Doe &lt;jane@doe.org&gt;,My Name &lt;my@email.com&gt;</full-recipient-list>
+  <sent-by-email>myemail@example.com</sent-by-email>
+  <full-recipient-list>Jane Doe &lt;janedoe@example.org&gt;,My Name &lt;myemail@example.com&gt;</full-recipient-list>
   <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
   <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
 </invoice-message>

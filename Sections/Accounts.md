@@ -37,7 +37,7 @@ HTTP Response: 200 Success
     <timezone>Pacific Time (US &amp; Canada)</timezone>
     <timezone-utc-offset type="integer">-25200</timezone-utc-offset>
     <id type="integer">123456</id>
-    <email>jane@doe.com</email>
+    <email>janedoe@example.com</email>
     <admin type="boolean">true</admin>
     <first-name>Jane</first-name>
     <last-name>Doe</last-name>

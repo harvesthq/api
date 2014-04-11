@@ -20,7 +20,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
     ```
     GET https://api.harvestapp.com/oauth2/authorize ?
         client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
-        redirect_uri=https%3A%2F%2Fyourapp.com%2Fredirect_path &
+        redirect_uri=https%3A%2F%2Fexample.com%2Fredirect_path &
         state=optional-csrf-token &
         response_type=code
     ```
@@ -30,7 +30,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
 2. *Get the authorization code* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a query parameter.
 
     ```
-    GET https://yourapp.com/redirect_path ?
+    GET https://example.com/redirect_path ?
         code=Ao%2ByCqyGInOKuHVIMkwZGlk%2Nvq9Kt3eDGBpKvZnvWP4latLD6umv2dD76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
         state=optional-csrf-token
     ```
@@ -110,7 +110,7 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
     ```
     GET https://api.harvestapp.com/oauth2/authorize ?
         client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
-        redirect_uri=https%3A%2F%2Fyourapp.com%2Fredirect_path &
+        redirect_uri=https%3A%2F%2Fexample.com%2Fredirect_path &
         state=optional-csrf-token &
         response_type=token
     ```
@@ -120,7 +120,7 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
 2. *Get the access token* when Harvest redirects back to your application. Harvest sends it to your redirect URI as a hash parameter.
 
     ```
-    GET https://yourapp.com/redirect_path #
+    GET https://example.com/redirect_path #
         access_token=Ao%2ByCqyGInOKuHVIMkwZGlk%2Fvq9Kt3eDGBpKvZnvWP4latLD6umv2dT76C100YbSABOEwUFqieosQRjNH7qvsA%3D%3D &
         expires_in=64799 &
         state=optional-csrf-token &

@@ -24,7 +24,7 @@ HTTP Response: 200 Success
     USA
     212-555-1212
     212-555-1213 (fax)
-    http://www.company.com</details>
+    http://www.example.com</details>
     <default-invoice-timeframe>20110101,20111231</default-invoice-timeframe>
     <last-invoice-kind>task</last-invoice-kind>
   </client>
@@ -63,7 +63,7 @@ HTTP Response: 200 Success
   USA
   212-555-1212
   212-555-1213 (fax)
-  http://www.company.com</details>
+  http://www.example.com</details>
   <default-invoice-timeframe>20110101,20111231</default-invoice-timeframe>
   <last-invoice-kind>task</last-invoice-kind>
 </client>
@@ -92,7 +92,7 @@ You need to post the following:
   USA
   212-555-1212
   212-555-1213 (fax)
-  http://www.company.com</details>
+  http://www.example.com</details>
 </client>
 ```
 
@@ -117,7 +117,7 @@ You may update selected attributes for a client.
   USA
   212-555-1212
   212-555-1213 (fax)
-  http://www.company.com</details>
+  http://www.example.com</details>
 </client>
 ```
 
