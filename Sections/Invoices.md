@@ -68,7 +68,7 @@ HTTP Response: 200 Success
 
 You can also query invoices by timeframe based on issue date.
 
-GET `/invoices?from=YYYYMMDD&to=YYYYMMDD`
+GET `/invoices?from=YYYY-MM-DD&to=YYYY-MM-DD`
 
 HTTP Response: 200 Success
 
