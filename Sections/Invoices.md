@@ -66,7 +66,7 @@ GET `/invoices?page=2`
 
 HTTP Response: 200 Success
 
-You can also query invoices by timeframe based on issue date.
+You can also query invoices by timeframe (date created) based on issue date.
 
 GET `/invoices?from=YYYYMMDD&to=YYYYMMDD`
 
