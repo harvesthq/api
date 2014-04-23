@@ -86,25 +86,14 @@ HTTP Response: 200 Success
 
 Other parameters for filtering by state are:
 
-### open
-sent to the client but no payment recieved.
+- `open` - sent to the client but no payment recieved
+- `partial` - partial payment was recorded
+- `draft` - Harvest did not sent this to a client, nor recorded any payments
+- `paid` - invoice paid in full
+- `unpaid` - unpaid invoices
+- `pastdue` - past due invoices
 
-### partial
-partial payment was recorded
-
-### draft
-harvest did not sent this to a client, nor recorded any payments
-
-### paid
-invoice payed in full
-
-### unpaid
-Macro used to return unpaid invoices
-
-### pastdue
-Macro used to return past due invoices
-
-You can also filter by client, for example to show only the invoices belonging to client with the id 23445
+You can also filter by client. For example, to show only the invoices belonging to a client with the id 23445
 
 GET `/invoices?client=23445`
 
