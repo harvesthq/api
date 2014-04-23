@@ -162,9 +162,8 @@ Sample post:
 
 ```xml
 <invoice>
-  <due-at type="date">2008-02-06</due-at>
     <!-- human representation for due at -->
-  <due-at-human-format>due upon receipt</due-at-human-format>
+  <due-at-human-format>NET 10</due-at-human-format>
   <client-id type="integer">8</client-id>
     <!-- see list bellow for accepted values -->
   <currency>United States Dollars - USD</currency>
@@ -209,7 +208,6 @@ Sample post:
 
 ```xml
 <invoice>
-  <due-at type="date">2008-02-06</due-at>
   <due-at-human-format>due upon receipt</due-at-human-format>
   <client-id type="integer">8</client-id>
   <currency>United States Dollars - USD</currency>
@@ -240,9 +238,8 @@ Sample put:
 
 ```xml
 <invoice>
-  <due-at type="date">2008-02-06</due-at>
     <!-- human representation for due at -->
-  <due-at-human-format>due upon receipt</due-at-human-format>
+  <due-at-human-format>NET 15</due-at-human-format>
   <client-id type="integer">8</client-id>
     <!-- see list bellow for accepted values -->
   <currency>United States Dollars - USD</currency>
