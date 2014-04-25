@@ -62,6 +62,7 @@ A few of our users have implemented their own Harvest API wrappers. If you plan 
 * Python: [Harvest Time Tracking API Client](https://github.com/lionheart/python-harvest), by Lionheart Software
 * Python: [Harvest API Wrapper](http://github.com/lann/Harvest), by Lann Martin and Brian Glass
 * Java: [Harvest Time Tracker Console Client](http://github.com/moffermann/harvest-client), by Mauricio Offermann
+* Java: [Harvest Java Wrapper](https://github.com/dmmikkel/harvestclient), by Dag Martin Mikkelsen
 * PHP: [HaPi - PHP Harvest API](http://mdbitz.com/harvest-api/), by Matthew Denton
 * Node.js: [node-harvest](https://github.com/log0ymxm/node-harvest), by Paul English
 * Drupal: [Harvest Module for Drupal](http://drupal.org/project/harvest), by ImageX Media
