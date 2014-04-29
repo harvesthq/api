@@ -66,7 +66,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
 
 5. *Use the access token* to send authorized requests to the Harvest API.
 
-    _Note: the `Content-Type` header for this request must be `application/json` or `application/xml`._
+    _Note: the `Content-Type` and `Accept` headers for this request must be `application/json` or `application/xml`._
 
     ```
     GET https://api.harvestapp.com/account/who_am_i ?
@@ -129,7 +129,7 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
 
 3. *Use the access token* to send authorized requests to the Harvest API.
 
-    _Note: the `Content-Type` header for this request must be `application/json` or `application/xml`._
+    _Note: the `Content-Type` and `Accept` headers for this request must be `application/json` or `application/xml`._
 
     ```
     GET https://api.harvestapp.com/account/who_am_i ?
