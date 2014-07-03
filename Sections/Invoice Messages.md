@@ -64,6 +64,7 @@ Location: /invoices/#{invoice_id}/messages/#{new_id}
   <recipients>support@harvestapp.com, help@getharvest.com</recipients>
   <attach-pdf type="boolean">true</attach-pdf>
   <send-me-a-copy type="boolean">true</send-me-a-copy>
+  <include-pay-pal-link type="boolean">true</include-pay-pal-link>
 </invoice-message>
 ```
 
