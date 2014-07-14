@@ -111,3 +111,9 @@ _Note: re-opening a closed invoice does not allow you to enter a message._
 POST `/invoices/#{invoice_id}/messages/mark_as_draft`
 
 HTTP Response: 200 OK.
+
+```xml
+<invoice-message>
+  <body>Optional message body goes here</body>
+</invoice-message>
+```
