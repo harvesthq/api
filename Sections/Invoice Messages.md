@@ -98,17 +98,13 @@ HTTP Response: 200 OK.
 </invoice-message>
 ```
 
-## CREATE A MESSAGE AND MARK A CLOSED (WRITTEN-OFF) INVOICE AS OPEN
+## MARK A CLOSED (WRITTEN-OFF) INVOICE AS OPEN
 
 POST `/invoices/#{invoice_id}/messages/re_open`
 
 HTTP Response: 200 OK.
 
-```xml
-<invoice-message>
-  <body>Optional message body goes here</body>
-</invoice-message>
-```
+* Note: re-opening a closed invoice does not allow you to enter a message. *
 
 ## CREATE A MESSAGE FOR MARKING AN OPEN INVOICE AS DRAFT
 
