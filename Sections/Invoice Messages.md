@@ -104,7 +104,7 @@ POST `/invoices/#{invoice_id}/messages/re_open`
 
 HTTP Response: 200 OK.
 
-* Note: re-opening a closed invoice does not allow you to enter a message. *
+_Note: re-opening a closed invoice does not allow you to enter a message._
 
 ## CREATE A MESSAGE FOR MARKING AN OPEN INVOICE AS DRAFT
 
