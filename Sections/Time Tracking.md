@@ -164,6 +164,8 @@ You need to POST the following:
 </request>
 ```
 
+_Special Note: Omit the request wrapper when making this call over JSON._
+
 Note: you can transmit a blank string as hours if you want to start a timer against the new day_entry record. For example:
 
 ```xml
