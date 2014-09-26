@@ -18,6 +18,8 @@ Post the following for a standard expense with a total cost:
   <total-cost type="decimal">11.00</total-cost>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">1</expense-category-id>
+    <!-- If true, expense can be invoiced. If false, expense cannot be invoiced. -->
+  <billable type="boolean">true</billable>
   <spent-at type="date">2008-02-10</spent-at>
 </expense>
 ```
@@ -30,6 +32,20 @@ Post the following for an expense whose total cost is calculated via an expense 
   <units type="integer">5</units>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">3</expense-category-id>
+  <billable type="boolean">true</billable>
+  <spent-at type="date">2008-02-10</spent-at>
+</expense>
+```
+
+Post the following for a non-billable expense:
+
+```xml
+<expense>
+  <notes>Buy Valentine's Day chocolates for Harvest</notes>
+  <total-cost type="decimal">11.00</total-cost>
+  <project-id type="integer">2</project-id>
+  <expense-category-id type="integer">1</expense-category-id>
+  <billable type="boolean">false</billable>
   <spent-at type="date">2008-02-10</spent-at>
 </expense>
 ```
@@ -60,6 +76,14 @@ Put the following for an expense whose total cost is calculated via an expense c
 </expense>
 ```
 
+Put the following to mark an expense as non-billable:
+
+```xml
+<expense>
+  <billable type="boolean">false</billable>
+</expense>
+```
+
 ## SHOW EXPENSE
 
 GET `/expenses/#{expense_id}`
@@ -71,6 +95,7 @@ HTTP Response: 200 Success
   <total-cost type="decimal">20.00</total-cost>
   <project-id type="integer">2</project-id>
   <expense-category-id type="integer">1</expense-category-id>
+  <billable type="boolean">true</billable>
   <spent-at type="date">2008-02-10</spent-at>
   <has-receipt type="boolean">true</has-receipt>
   <receipt-url>https://sub.harvestapp.com/expenses/234997/receipt</receipt-url>
