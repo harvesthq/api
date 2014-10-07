@@ -9,7 +9,7 @@ You'll need to [register your application](https://platform.harvestapp.com/oauth
 
 
 ### Access Tokens
-Access tokens allow your application to communicate with Harvest on behalf of your users. Each user in Harvest is granted a token that expires after 18 hours. Users also have refresh tokens that can be used to request new access tokens for up to 30 days.
+Access tokens allow your application to communicate with Harvest on behalf of your users. Each user in Harvest is granted a token that expires after 18 hours.
 
 ## For Server-Side Applications
 
@@ -73,7 +73,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
         access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
     ```
 
-6. *Request a new access token* after 18 hours using the refresh token within 30 days.
+6. *Request a new access token* after 18 hours using the refresh token.
 
     _Note: the `Content-Type` header for this request must be `application/x-www-form-urlencoded`._
 
