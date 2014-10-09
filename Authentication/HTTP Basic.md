@@ -7,7 +7,7 @@ HTTP Basic authentication is the oldest and simplest way to start working with t
 To interact with Harvest in this example we're going to use XML. To make requests in XML, specify application/xml for your Content-Type and Accept headers. A simple example with [curl](http://en.wikipedia.org/wiki/CURL):
 
 ```sh
-curl -H 'Content-Type: application/xml' -H 'Accept: application/xml' -u "user@example.com:password" https://subdomain.harvestapp.com/account/who_am_i
+curl -H 'Content-Type: application/xml' -H 'Accept: application/xml' -u "user@example.com:password" https://example.harvestapp.com/account/who_am_i
 ```
 
 Successful requests return HTTP response codes in the 2xx range (e.g. 200, 201, etc.). Other response codes indicate a failed request or missing resource, in which case an error message may be provided. When successful, the above request returns:
@@ -16,7 +16,7 @@ Successful requests return HTTP response codes in the 2xx range (e.g. 200, 201, 
 <?xml version="1.0" encoding="UTF-8"?>
 <hash>
   <company>
-    <base-uri>https://subdomain.harvestapp.com</base-uri>
+    <base-uri>https://example.harvestapp.com</base-uri>
   </company>
   <user>
     <timestamp-timers type="boolean">false</timestamp-timers>
