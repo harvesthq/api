@@ -18,7 +18,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
 1. *Redirect users to Harvest* to authorize their accounts with your application.
 
     ```
-    GET https://api.harvestapp.com/oauth2/authorize ?
+    GET https://example.harvestapp.com/oauth2/authorize ?
         client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
         redirect_uri=https%3A%2F%2Fexample.com%2Fredirect_path &
         state=optional-csrf-token &
@@ -40,7 +40,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
     _Note: the `Content-Type` header for this request must be `application/x-www-form-urlencoded`._
 
     ```
-    POST https://api.harvestapp.com/oauth2/token
+    POST https://example.harvestapp.com/oauth2/token
     ```
 
     ```json
@@ -69,7 +69,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
     _Note: the `Content-Type` and `Accept` headers for this request must be `application/json` or `application/xml`._
 
     ```
-    GET https://api.harvestapp.com/account/who_am_i ?
+    GET https://example.harvestapp.com/account/who_am_i ?
         access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
     ```
 
@@ -78,7 +78,7 @@ Harvest uses the [Authorization Code flow](http://tools.ietf.org/html/draft-ietf
     _Note: the `Content-Type` header for this request must be `application/x-www-form-urlencoded`._
 
     ```
-    POST https://api.harvestapp.com/oauth2/token
+    POST https://example.harvestapp.com/oauth2/token
     ```
 
     ```json
@@ -108,7 +108,7 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
 1. *Redirect users to Harvest* to authorize their accounts with your application.
 
     ```
-    GET https://api.harvestapp.com/oauth2/authorize ?
+    GET https://example.harvestapp.com/oauth2/authorize ?
         client_id=NMBEWl3h0r4KKNhfOsmPJw%3D%3D &
         redirect_uri=https%3A%2F%2Fexample.com%2Fredirect_path &
         state=optional-csrf-token &
@@ -132,6 +132,6 @@ Harvest uses the [Implicit Grant flow](http://tools.ietf.org/html/draft-ietf-oau
     _Note: the `Content-Type` and `Accept` headers for this request must be `application/json` or `application/xml`._
 
     ```
-    GET https://api.harvestapp.com/account/who_am_i ?
+    GET https://example.harvestapp.com/account/who_am_i ?
         access_token=Jjv5cUAnQx7R9jEECHNRxan7iMprt0ySncJhDdzQbtc%2FQXhMZcNVPQtJuBiDajPqNUz79o7S0FNvWc2WwIDcMA%3D%3D
     ```
