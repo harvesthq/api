@@ -50,6 +50,7 @@ HTTP Response: 200 Success
       <name>Click and Type</name>
       <code></code>
       <id type="integer">3</id>
+      <billable type="boolean">true</billable>
       <client>AFS</client>
       <tasks>
         <task>
