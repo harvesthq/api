@@ -66,6 +66,7 @@ A few of our users have implemented their own Harvest API wrappers. If you plan 
 * PHP: [HaPi - PHP Harvest API](http://mdbitz.com/harvest-api/), by Matthew Denton
 * Node.js: [node-harvest](https://github.com/log0ymxm/node-harvest), by Paul English
 * Drupal: [Harvest Module for Drupal](http://drupal.org/project/harvest), by ImageX Media
+* .Net: [Harvest.Net](https://github.com/ithielnor/harvest.net), by Joel Potter
 
 We also have sample scripts in several languages. These scripts depict authentication and basic API actions. Visit the [Harvest API Samples GitHub project](http://github.com/harvesthq/harvest_api_samples) to take a look at the scripts.
 
