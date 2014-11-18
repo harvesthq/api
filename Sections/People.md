@@ -95,12 +95,6 @@ Upon creation, an email will be sent to the new user with instructions for setti
 
 Note: we accept only a limited set of values for the timezone attribute.
 
-## RESET PASSWORD FOR USER
-
-POST `/people/#{user_id}/reset_password`
-
-Harvest will send an email with instructions for resetting a password to the user. All other API calls will ignore changes to the password attribute.
-
 ## UPDATE USER
 
 PUT `/people/#{user_id}`
