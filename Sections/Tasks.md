@@ -68,21 +68,19 @@ Location: /tasks/#{new_task_id} Sample post:
   <billable-by-default type="boolean">false</billable-by-default>
   <default-hourly-rate type="decimal">100</default-hourly-rate>
   <is-default type="boolean">false</is-default>
-  <name>Server Admninistration</name>
+  <name>Server Administration</name>
 </task>
 ```
 
-## DELETE EXISTING TASK
+## ARCHIVE OR DELETE EXISTING TASK
 
 DELETE `/tasks/#{task_id}`
 
 HTTP Response: 200 OK
 
-Returned if task does not have any hours associated.
+Returned if task does not have any hours associated - task will be deleted.
 
-HTTP Response: 400 Bad Request
-
-Returned if task is not removable.
+Returned if task is not removable - task will be archived.
 
 ## UPDATE AN EXISTING TASK
 
@@ -103,7 +101,7 @@ Sample post:
 </task>
 ```
 
-## ACTIVATE EXISTING TASK
+## ACTIVATE EXISTING ARCHIVED TASK
 
 POST `/tasks/#{task_id}/activate`
 
