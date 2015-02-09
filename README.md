@@ -6,9 +6,11 @@ If you need to access and edit your projects, clients, users and tasks the exten
 
 Remember to write your application carefully, caching when possible. In case of abuse you may be blocked, disallowing further API access. As an act of courtesy, please provide User-Agent strings denoting your application.
 
-## Get the Help You Need
+## Troubleshooting
 
-Have a question about using the API? Have you noticed an error or omission in the documentation? Feel free to [open an issue](http://github.com/harvesthq/api/issues/) with your question. If you're running into problems with a specific implementation, however, it's best to [get in touch with us directly](http://www.getharvest.com/help/contact) in support (that way we can work with you, checking the logs for specific requests and responses).
+If you're running into problems with a specific implementation, it's best to try the request in a client like [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en) to try to narrow down where things are going wrong. If you're still having trouble, [drop us a line.](http://www.getharvest.com/help/contact) Please make sure to include the full request you're having trouble with, including any headers, so we can investigate the issue for you.
+
+In many cases, the omission of the ```Content-Type``` and ```Accept``` headers are the root cause of unexpected errors from the API.
 
 ## Sample Code & Examples
 
@@ -34,7 +36,7 @@ Harvest will check your role on each request, and actions that are unavailable t
 
 The Harvest API supports both XML and JSON data formats.
 
-For an XML request, send `application/xml` in the `Accept` and `Content-Type` headers. Send `application/json` for JSON responses. All examples in this documentation assume XML input and output. JSON output follows similar structure to the XML documented, with the notable exception that '-' are typically '_' (for example projects require a client_id rather than client-id).
+For an XML request, send `application/xml` in the `Accept` and `Content-Type` headers. Send `application/json` for JSON responses. All examples in this documentation assume XML input and output, however JSON output follows similar structure to the XML documented.
 
 ## Throttle Limit - HTTP 503
 
@@ -60,6 +62,7 @@ A few of our users have implemented their own Harvest API wrappers. If you plan 
 
 * Ruby: [Harvested](https://github.com/zmoazeni/harvested), by Zach Moazeni
 * Python: [Harvest Time Tracking API Client](https://github.com/lionheart/python-harvest), by Lionheart Software
+* Python: [Harvest API Wrapper](http://github.com/lann/Harvest), by Lann Martin and Brian Glass
 * Java: [Harvest Time Tracker Console Client](http://github.com/moffermann/harvest-client), by Mauricio Offermann
 * Java: [Harvest Java Wrapper](https://github.com/dmmikkel/harvestclient), by Dag Martin Mikkelsen
 * PHP: [HaPi - PHP Harvest API](http://mdbitz.com/harvest-api/), by Matthew Denton
