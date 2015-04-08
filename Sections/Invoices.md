@@ -216,10 +216,12 @@ Sample post:
   <notes>Some notes go here</notes>
   <number>82208</number>
   <kind>free_form</kind>
+  <tax type="decimal">3</tax>
+  <tax2 type="decimal">5</tax2>
     <!-- Line items in CSV format -->
   <csv-line-items>
   kind,description,quantity,unit_price,amount,taxed,taxed2,project_id
-  Service,Security support / Apply upgrades,0.68,80.00,54.4,true,false,3
+  Service,Security support / Apply upgrades,0.68,80.00,54.4,true,true,3
   Service,Security support / Intrusion detection,0.57,80.00,45.6,true,false,3
   Service,Backend Programming / Forum admin,1.20,80.00,96.0,true,false,3
   </csv-line-items>
