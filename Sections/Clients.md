@@ -15,7 +15,7 @@ HTTP Response: 200 Success
     <highrise-id type="integer">568902</highrise-id>
     <id type="integer">11072</id>
     <cache-version type="integer">0</cache-version>
-    <currency>United States Dollars - USD</currency>
+    <currency>United States Dollar - USD</currency>
     <active type="boolean">true</active>
     <currency-symbol>$</currency-symbol>
     <details>123 Main St.
@@ -54,7 +54,7 @@ HTTP Response: 200 Success
   <highrise-id type="integer">110011</highrise-id>
   <id type="integer">11072</id>
   <cache-version type="integer">0</cache-version>
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <currency-symbol>$</currency-symbol>
   <active type="boolean">true</active>
   <details>123 Main St.
@@ -83,7 +83,7 @@ You need to post the following:
 <client>
   <name>Company LLC</name>
   <highrise-id type="integer">110011</highrise-id>
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <currency-symbol>$</currency-symbol>
   <active type="boolean">true</active>
   <details>123 Main St.
