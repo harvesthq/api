@@ -8,18 +8,15 @@ HTTP Response: 200 Success
 
 ```xml
 <project>
-  <name>SuprGlu</name>
   <id type="integer">1</id>
   <client-id type="integer">2</client-id>
+  <name>SuprGlu</name>
   <code>HA-0001</code>
   <active type="boolean">true</active>
-  <notes nil="true"/>
   <billable type="boolean">false</billable>
   <!-- Shows if the project is billed by task hourly rate or
        person hourly rate. Options: Tasks, People, none -->
   <bill-by>none</bill-by>
-  <cost-budget type="decimal">1000.0</cost-budget>
-  <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
   <hourly-rate nil="true"/>
   <!-- Shows if the budget provided by total project hours,
        total project cost, by tasks, by people or none provided.
@@ -30,14 +27,19 @@ HTTP Response: 200 Success
   <over-budget-notification-percentage type="decimal">80.0</over-budget-notification-percentage>
   <over-budget-notified-at nil="true"/>
   <show-budget-to-all type="boolean">true</show-budget-to-all>
-  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
-  <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+  <created-at type="datetime">2015-04-09T12:07:56Z</created-at>
+  <updated-at type="datetime">2015-04-09T12:07:56Z</updated-at>
+  <starts-on type="date">2015-03-09</starts-on>
+  <ends-on type="date">2015-07-09</ends-on>
   <!-- These are hints to when the earliest and latest date when a
        timesheet record or an expense was created for a project. Note
        that these fields are only updated once every 24 hours, they
        are useful to constructing a full project timeline. -->
-  <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
-  <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
+  <hint-earliest-record-at type="date">2015-03-04</hint-earliest-record-at>
+  <hint-latest-record-at type="date">2015-04-09</hint-latest-record-at>
+  <notes>Project notes go here.</notes>
+  <cost-budget type="decimal">1000.0</cost-budget>
+  <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
 </project>
 ```
 
@@ -50,18 +52,15 @@ HTTP Response: 200 Success
 ```xml
 <projects>
   <project>
-    <name>SuprGlu</name>
     <id type="integer">1</id>
     <client-id type="integer">2</client-id>
+    <name>SuprGlu</name>
     <code>HA-0001</code>
     <active type="boolean">true</active>
-    <notes nil="true"/>
     <billable type="boolean">false</billable>
     <!-- Shows if the project is billed by task hourly rate or
          person hourly rate. Options: Tasks, People, none -->
     <bill-by>none</bill-by>
-    <cost-budget type="decimal">1000.0</cost-budget>
-    <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
     <hourly-rate nil="true"/>
     <!-- Shows if the budget provided by total project hours,
          total project cost, by tasks, by people or none provided.
@@ -72,14 +71,19 @@ HTTP Response: 200 Success
     <over-budget-notification-percentage type="decimal">80.0</over-budget-notification-percentage>
     <over-budget-notified-at nil="true"/>
     <show-budget-to-all type="boolean">true</show-budget-to-all>
-    <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
-    <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+    <created-at type="datetime">2015-04-09T12:07:56Z</created-at>
+    <updated-at type="datetime">2015-04-09T12:07:56Z</updated-at>
+    <starts-on type="date">2015-03-09</starts-on>
+    <ends-on type="date">2015-07-09</ends-on>
     <!-- These are hints to when the earliest and latest date when a
          timesheet record or an expense was created for a project. Note
          that these fields are only updated once every 24 hours, they
          are useful to constructing a full project timeline. -->
-    <hint-earliest-record-at type="date">2006-01-04</hint-earliest-record-at>
-    <hint-latest-record-at type="date">2007-06-06</hint-latest-record-at>
+    <hint-earliest-record-at type="date">2014-01-04</hint-earliest-record-at>
+    <hint-latest-record-at type="date">2014-06-06</hint-latest-record-at>
+    <notes>Project notes go here.</notes>
+    <cost-budget type="decimal">1000.0</cost-budget>
+    <cost-budget-include-expenses type="boolean">false</cost-budget-include-expenses>
   </project>
   <project>
     ...
