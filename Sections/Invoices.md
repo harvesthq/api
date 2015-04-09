@@ -23,7 +23,7 @@ HTTP Response: 200 Success
     <client-id type="integer">46066</client-id>
     <subject>Invoice for project X</subject>
       <!-- see  -->
-    <currency>United States Dollars - USD</currency>
+    <currency>United States Dollar - USD</currency>
     <issued-at type="date">2008-02-06</issued-at>
     <created-by-id type="integer">123456</created-by-id>
     <notes></notes>
@@ -113,7 +113,7 @@ HTTP Response: 200 Success
   <client-id type="integer">8</client-id>
   <subject>Invoice for Project X</subject>
   <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <due-amount type="decimal">253.44</due-amount>
   <due-at type="date">2008-02-06</due-at>
   <due-at-human-format>due upon receipt</due-at-human-format>
@@ -166,7 +166,7 @@ Sample post:
   <due-at-human-format>NET 10</due-at-human-format>
   <client-id type="integer">8</client-id>
     <!-- see list bellow for accepted values -->
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <issued-at type="date">2008-02-06</issued-at>
   <subject>Your invoice subject goes here</subject>
   <notes>Some notes go here</notes>
@@ -210,16 +210,18 @@ Sample post:
 <invoice>
   <due-at-human-format>due upon receipt</due-at-human-format>
   <client-id type="integer">8</client-id>
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <issued-at type="date">2008-02-06</issued-at>
   <subject>Your invoice subject goes here</subject>
   <notes>Some notes go here</notes>
   <number>82208</number>
   <kind>free_form</kind>
+  <tax type="decimal">3</tax>
+  <tax2 type="decimal">5</tax2>
     <!-- Line items in CSV format -->
   <csv-line-items>
   kind,description,quantity,unit_price,amount,taxed,taxed2,project_id
-  Service,Security support / Apply upgrades,0.68,80.00,54.4,true,false,3
+  Service,Security support / Apply upgrades,0.68,80.00,54.4,true,true,3
   Service,Security support / Intrusion detection,0.57,80.00,45.6,true,false,3
   Service,Backend Programming / Forum admin,1.20,80.00,96.0,true,false,3
   </csv-line-items>
@@ -242,7 +244,7 @@ Sample put:
   <due-at-human-format>NET 15</due-at-human-format>
   <client-id type="integer">8</client-id>
     <!-- see list bellow for accepted values -->
-  <currency>United States Dollars - USD</currency>
+  <currency>United States Dollar - USD</currency>
   <issued-at type="date">2008-02-06</issued-at>
   <notes>Some notes go here</notes>
   <number>82208</number>
