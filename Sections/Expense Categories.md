@@ -99,11 +99,3 @@ Returned if expense category does not have any reported expenses associated.
 HTTP Response: 400 Bad Request
 
 Returned if expense category is not removable.
-
-## TOGGLE EXISTING EXPENSE CATEGORY'S DEACTIVATED STATUS
-
-DELETE `/expense_categories/#{expense_category_id}/toggle`
-
-HTTP Response: 200 OK
-
-Location: /expense_categories/#{expense_category_id}
