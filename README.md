@@ -1,3 +1,5 @@
+*Looking for a quick way to add time tracking to your app? Learn more about the Harvest Button and Widget [here](https://www.getharvest.com/add-time-tracking).*
+
 # Introduction to the Harvest API
 
 Harvest provides two API interfaces, serving two distinct roles. If you need to access and manipulate your daily timesheet the [Time Tracking API](https://github.com/harvesthq/api/blob/master/Sections/Time%20Tracking.md) fits the bill. Notable uses of the [Time Tracking API](https://github.com/harvesthq/api/blob/master/Sections/Time%20Tracking.md) are the widgets we provide for PC and Mac as well as other third party timesheet software integrations.
