@@ -1,4 +1,6 @@
-# Account Information
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Account Information
 
 ## USER AND ACCOUNT INFORMATION FOR CURRENT USER
 

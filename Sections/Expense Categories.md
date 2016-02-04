@@ -1,4 +1,6 @@
-# Expense Categories
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Expense Categories
 
 ## SHOW ALL EXPENSE CATEGORIES
 

@@ -1,4 +1,6 @@
-# Client Contacts
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Client Contacts
 
 ## GET ALL CONTACTS FOR AN ACCOUNT
 

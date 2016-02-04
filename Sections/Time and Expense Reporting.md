@@ -1,4 +1,6 @@
-# Time and Expense Reporting
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Time and Expense Reporting
 
 Harvest provides a powerful reporting interface along with CSV export. If you need to get raw data in a scriptable manner, Harvest provides direct XML export through the Reporting API. You can import XML data into other systems or create your own custom reporting interfaces on top of your Harvest account's data.
 

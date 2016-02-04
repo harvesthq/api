@@ -1,4 +1,6 @@
-# Invoices
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Invoices
 
 Important: this assumes that the invoice feature is enabled for your account (via. "Choose Modules" on your Account Settings page).
 

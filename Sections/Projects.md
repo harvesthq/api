@@ -1,4 +1,6 @@
-# Projects
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Projects
 
 ## SHOW A PROJECT
 
