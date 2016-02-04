@@ -1,4 +1,6 @@
-# Task Assignment: Assigning tasks to projects
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Task Assignment: Assigning tasks to projects
 
 ## GET ALL TASKS ASSIGNED TO A GIVEN PROJECT
 

@@ -1,4 +1,6 @@
-# Expense Tracking API
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Expense Tracking API
 
 The Expense tracking API allows you to access and manipulate expense entries in similar fashion to using the weekly expensesheet view. This allows developers to create lightweight clients or widgets to track expenses beyond directly interacting with Harvest through the web browser.
 

@@ -1,4 +1,6 @@
-# Time Tracking API
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Time Tracking API
 
 The Time tracking API allows you to access and manipulate time entries in similar fashion to using the daily timesheet view. This allows developers to create lightweight clients or widgets to track time beyond directly interacting with Harvest through the web browser.
 

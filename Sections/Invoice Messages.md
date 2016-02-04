@@ -1,4 +1,6 @@
-# Invoice Messages
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Invoice Messages
 
 Important: this assumes invoice feature is enabled for your account.
 

@@ -1,4 +1,6 @@
-# Tasks
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Tasks
 
 ## SHOW ONE TASK
 

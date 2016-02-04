@@ -1,4 +1,6 @@
-# Invoice Payments
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## Invoice Payments
 
 Important: this assumes invoice feature is enabled for your account.
 

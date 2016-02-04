@@ -1,4 +1,6 @@
-# User Assignment: Assigning people to projects
+# This documentation is out of date. Please see our new API docs [here!](http://help.getharvest.com/api)
+
+## User Assignment: Assigning people to projects
 
 ## GET ALL USERS ASSIGNED TO A GIVEN PROJECT
 
